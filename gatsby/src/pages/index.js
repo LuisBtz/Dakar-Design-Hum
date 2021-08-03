@@ -4,6 +4,7 @@ import SliderComponent from "../components/home/SliderComponent"
 import WhoWeAre from "../components/home/WhoWeAre"
 import Layout from "../components/layout/layout"
 import Seo from "../components/layout/seo"
+import Links from '../components/home/Links'
 
 
 // markup
@@ -14,6 +15,7 @@ const IndexPage = () => {
     <Marquee />
     <SliderComponent />
     <WhoWeAre />
+    <Links />
   </Layout>
   )
 }

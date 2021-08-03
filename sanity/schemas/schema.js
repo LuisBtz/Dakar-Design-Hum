@@ -9,6 +9,7 @@ import longText from './objects/longText'
 import imageType from './objects/imageType'
 import blockModule from './objects/blockModule'
 import slide from './objects/slide'
+import link from './objects/link'
 
 import settingsPage from './pages/settingsPage'
 import homePage from './pages/homePage'
@@ -28,6 +29,7 @@ export default createSchema({
     longText,
     blockModule,
     slide,
+    link,
     
     settingsPage,
     homePage,

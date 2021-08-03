@@ -41,5 +41,75 @@ export default {
             title: 'Who We Are Text 2',
             type: 'longText'
         },
+        {
+            name: 'instituteOfDesignText',
+            title: 'Institute Of Design Text',
+            type: 'singleText'
+        },
+        {
+            name: 'instituteOfDesignImage',
+            title: 'Institute Of Design Image',
+            type: 'imageType'
+        },
+        {
+            name: 'textilesOfSeneglaText',
+            title: 'Textiles Of Senegla Text',
+            type: 'singleText'
+        },
+        {
+            name: 'textilesOfSeneglaImage',
+            title: 'Textiles Of Senegla Image',
+            type: 'imageType'
+        },
+        {
+            name: 'word1',
+            title: 'Word 1',
+            type: 'singleText'
+        },
+        {
+            name: 'word2',
+            title: 'Word 2',
+            type: 'singleText'
+        },
+        {
+            name: 'word3',
+            title: 'Word 3',
+            type: 'singleText'
+        },
+        {
+            name: 'quote',
+            title: 'Quote',
+            type: 'singleText'
+        },
+        {
+            name: 'quoteFrom',
+            title: 'Quote From',
+            type: 'singleText'
+        },
+        {
+            name: 'studioText',
+            title: 'Studio Text',
+            type: 'singleText'
+        },
+        {
+            name: 'studioImage',
+            title: 'Studio Image',
+            type: 'imageType'
+        },
+        {
+            name: 'manufacturingText',
+            title: 'Manufacturing Text',
+            type: 'singleText'
+        },
+        {
+            name: 'manufacturingImage',
+            title: 'Manufacturing Image',
+            type: 'imageType'
+        },
+        {
+            name: 'takeTheNextStepBackgroundImage',
+            title: 'Take The Next Step Background Image',
+            type: 'imageType'
+        },
     ],
 }

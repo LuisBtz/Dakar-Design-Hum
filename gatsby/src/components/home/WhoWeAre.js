@@ -1,17 +1,40 @@
 import React from 'react'
 import styled from 'styled-components';
+import { useStaticQuery, graphql } from 'gatsby';
+
 
 const WhoWeAre = () => {
+
+    const data = useStaticQuery(graphql`
+    query  {
+        sanityHomePage {
+            whoWeAreTitle {
+                en
+            }
+            whoWeAreText1 {
+                en
+            }
+            whoWeAreText2 {
+                en
+            }
+            whoWeAreDescription {
+                en
+            }
+        }
+    }
+    `)
+
+
     return (
         <WWAContainer>
             <Left>
-                <h2>Who We Are</h2>
+                <h2>{data.sanityHomePage.whoWeAreTitle.en}</h2>
             </Left>
             <Rigth>
-                <h1>We are an interdisciplinary design space that will provide high quality creative design educationto talented individuals who are looking to pursue a career in design.</h1>
+                <h1>{data.sanityHomePage.whoWeAreDescription.en}</h1>
                 <Paragraph>
-                    <p>Dakar serves as one of the most pivotal cities in West Africa in termsof fashion, furniture design, and the arts. Despite its potential to become Africa´s premierdesign city, Dakar remainshighly underserved in quality educational institutions in the designsector. Aspiring design students are often constraint to poor quality trining with little continuity in their professional careers.</p>
-                    <p>The DAKAR DESIGN HUB aspires to revolutionize the creative design insdustry in Senegal by galvanizing, organizing and bringing togehter different actors in the creative insdustries. The HUB will offer a number of interconnected programs and services in order to help galvanize Snegal´s creative industries.</p>
+                    <p>{data.sanityHomePage.whoWeAreText1.en}</p>
+                    <p>{data.sanityHomePage.whoWeAreText2.en}</p>
                 </Paragraph>
             </Rigth>
         </WWAContainer>

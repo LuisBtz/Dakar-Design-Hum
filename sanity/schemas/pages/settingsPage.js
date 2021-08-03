@@ -39,6 +39,12 @@ export default {
             name: 'email',
             title: 'E-mail',
             type: 'string'
+        },
+        {
+            name: 'socialMedia',
+            title: 'Social Media',
+            type: 'array',
+            of: [{type:'link'}]
         }
     ],
 }
