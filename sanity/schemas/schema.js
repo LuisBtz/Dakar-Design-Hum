@@ -8,8 +8,10 @@ import singleText from './objects/singleText'
 import longText from './objects/longText'
 import imageType from './objects/imageType'
 import blockModule from './objects/blockModule'
+import slide from './objects/slide'
 
 import settingsPage from './pages/settingsPage'
+import homePage from './pages/homePage'
 
 
 
@@ -25,7 +27,9 @@ export default createSchema({
     imageType,
     longText,
     blockModule,
+    slide,
     
     settingsPage,
+    homePage,
   ]),
 })

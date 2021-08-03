@@ -1,4 +1,7 @@
 import * as React from "react"
+import Marquee from "../components/home/Marquee"
+import SliderComponent from "../components/home/SliderComponent"
+import WhoWeAre from "../components/home/WhoWeAre"
 import Layout from "../components/layout/layout"
 import Seo from "../components/layout/seo"
 
@@ -8,9 +11,14 @@ const IndexPage = () => {
   return (
     <Layout >
     <Seo title='Home' description='Home page' /*image={data.sanityHomePage.exhibitionsHF.thumbnailCover.asset.url}  */ />
-    <h1>Home</h1>
+    <Marquee />
+    <SliderComponent />
+    <WhoWeAre />
   </Layout>
   )
 }
+
+
+
 
 export default IndexPage

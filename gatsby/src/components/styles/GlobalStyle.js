@@ -52,6 +52,7 @@ export const GlobalStyle = createGlobalStyle`
     --headline-1: 3.75rem;
     --headline-2: 2.18rem;
     --headline-3: 1.875rem;
+    --headline-4: 1.3125rem;
     --paragraph: 1rem;
     --yellow: #F5BD16;
     --black: #000000;

@@ -87,9 +87,9 @@ const Header = () => {
                 </Elemento5>
                 <Elemento6 className='elemento'>
                     <ul>
-                        <li><Link className='en'>En</Link></li>
+                        <li><Link to='/'  className='en'>En</Link></li>
                         <span>/</span>
-                        <li><Link className='fr'>Fr</Link></li>
+                        <li><Link to='/' className='fr'>Fr</Link></li>
                     </ul>
                 </Elemento6>
             </NavContainerDesktop>
@@ -116,14 +116,14 @@ const Header = () => {
 
                     <Lang>
                         <ul>
-                            <li><Link className='en'>En</Link></li>
+                            <li><Link to='/' className='en'>En</Link></li>
                             <span>/</span>
-                            <li><Link className='fr'>Fr</Link></li>
+                            <li><Link to='/' className='fr'>Fr</Link></li>
                         </ul>
                     </Lang>
 
                 </div>
-                <section class={nav ? 'active' : ''}>
+                <section className={nav ? 'active' : ''}>
                     <nav>
                         <h4>Programs</h4>
                         <ul>
