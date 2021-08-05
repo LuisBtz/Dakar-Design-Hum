@@ -47,6 +47,7 @@ const WWAContainer = styled.section`
     display: flex;
     width: 100%;
     padding: 50px;
+    border-bottom: solid 1px black;
 
     @media (max-width: 850px) {
         flex-direction: column;

@@ -24,6 +24,7 @@ const SliderComponent = () => {
     query  {
         sanityHomePage {
             sliderHome {
+                _key
                 backgroundImage {
                     asset {
                         gatsbyImageData(
@@ -46,11 +47,11 @@ const SliderComponent = () => {
 
     return (
         <SliderContainer {...settings}>
-            {data.sanityHomePage.sliderHome.map(({ backgroundImage, text, id}) => {
+            {data.sanityHomePage.sliderHome.map(({ backgroundImage, text, _key}) => {
                     const getDataImage = getImage(backgroundImage.asset);
                 return (
                     
-                <Slide key={id}>
+                <Slide key={_key}>
                     <GatsbyImage
                         style={{ height: "100%", width: "100%" }}
                         image={getDataImage}
