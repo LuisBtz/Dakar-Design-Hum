@@ -5,6 +5,7 @@ import WhoWeAre from "../components/home/WhoWeAre"
 import Layout from "../components/layout/layout"
 import Seo from "../components/layout/seo"
 import Links from '../components/home/Links'
+import TakeTheNextStep from "../components/home/TakeTheNextStep"
 
 
 // markup
@@ -16,6 +17,7 @@ const IndexPage = () => {
     <SliderComponent />
     <WhoWeAre />
     <Links />
+    <TakeTheNextStep />
   </Layout>
   )
 }
