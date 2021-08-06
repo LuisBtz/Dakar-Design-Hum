@@ -66,6 +66,7 @@ const TextoRelative = styled.div`
     width: calc(100% - 100px);
     h2 {
         color: white;
+        text-align: center;
     }
 `
 

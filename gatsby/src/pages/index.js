@@ -6,6 +6,7 @@ import Layout from "../components/layout/layout"
 import Seo from "../components/layout/seo"
 import Links from '../components/home/Links'
 import TakeTheNextStep from "../components/home/TakeTheNextStep"
+import Newsletter from "../components/home/Newsletter"
 
 
 // markup
@@ -18,6 +19,7 @@ const IndexPage = () => {
     <WhoWeAre />
     <Links />
     <TakeTheNextStep />
+    <Newsletter/>
   </Layout>
   )
 }

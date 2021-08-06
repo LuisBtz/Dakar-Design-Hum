@@ -76,6 +76,12 @@ export const GlobalStyle = createGlobalStyle`
         -ms-overflow-style: none;  /* IE and Edge */
         scrollbar-width: none;  /* Firefox */
         font-feature-settings: 'salt' on;
+        padding: 50px 30px;
+    }
+    @media (max-width: 780px) {
+      body {
+        padding: 30px 20px;
+      }
     }
     main {
       background: var(--white) !important;
