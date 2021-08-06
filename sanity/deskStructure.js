@@ -21,5 +21,37 @@ export default () =>
               .schemaType('homePage')
               .documentId('homePage')
         ),
-        ...S.documentTypeListItems().filter(listItem => !['settingsPage', 'homePage'].includes(listItem.getId()))
+        S.listItem()
+          .title('Institute Of Design')
+          .icon(() => '🎨')
+          .child(
+            S.document()
+              .schemaType('instituteOfDesign')
+              .documentId('instituteOfDesign')
+        ),
+        S.listItem()
+          .title('Textiles Of Senegal')
+          .icon(() => '🧢')
+          .child(
+            S.document()
+              .schemaType('textilesOfSenegal')
+              .documentId('textilesOfSenegal')
+        ),
+        S.listItem()
+          .title('Studio')
+          .icon(() => '🎙')
+          .child(
+            S.document()
+              .schemaType('studioPage')
+              .documentId('studioPage')
+        ),
+        S.listItem()
+          .title('Manufacturing')
+          .icon(() => '👷🏻‍♀️')
+          .child(
+            S.document()
+              .schemaType('manufacturing')
+              .documentId('manufacturing')
+        ),
+        ...S.documentTypeListItems().filter(listItem => !['settingsPage', 'homePage', 'instituteOfDesign', 'textilesOfSenegal', 'studioPage', 'manufacturing'].includes(listItem.getId()))
     ])

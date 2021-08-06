@@ -21,6 +21,11 @@ export default {
             type: 'imageType'
         },
         {
+            name: 'verticalLogo',
+            title: 'Vertical Logo',
+            type: 'imageType'
+        },
+        {
             name: 'copyright',
             title: 'Copyright',
             type: 'singleText'

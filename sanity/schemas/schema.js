@@ -10,11 +10,17 @@ import imageType from './objects/imageType'
 import blockModule from './objects/blockModule'
 import slide from './objects/slide'
 import link from './objects/link'
+import programDocument from './objects/programDocument'
+import aplicationDocument from './objects/aplicationDocument'
+import tuitionDocument from './objects/tuitionDocument'
+import project from './objects/project'
 
 import settingsPage from './pages/settingsPage'
 import homePage from './pages/homePage'
-
-
+import instituteOfDesign from './pages/instituteOfDesign'
+import textilesOfSenegal from './pages/textilesOfSenegal'
+import studioPage from './pages/studioPage'
+import manufacturing from './pages/manufacturing'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -30,8 +36,16 @@ export default createSchema({
     blockModule,
     slide,
     link,
+    programDocument,
+    aplicationDocument,
+    tuitionDocument,
+    project,
     
     settingsPage,
     homePage,
+    instituteOfDesign,
+    textilesOfSenegal,
+    studioPage,
+    manufacturing
   ]),
 })
