@@ -71,7 +71,7 @@ const altText = data.sanitySettingsPage.logo.enAlt;
                     <Social>
                         {data.sanitySettingsPage.socialMedia.map(({ _key, socialMediaUrl, icon }) => {
                         return (
-                            <li><a target='_blank' rel="noreferrer" key={_key} href={socialMediaUrl}><img src={icon.asset.url} alt={icon.enAlt} /></a></li>
+                            <li key={_key}><a target='_blank' rel="noreferrer" href={socialMediaUrl}><img src={icon.asset.url} alt={icon.enAlt} /></a></li>
                         )
                         })}
                     </Social>

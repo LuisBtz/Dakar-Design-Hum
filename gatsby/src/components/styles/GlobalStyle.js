@@ -12,6 +12,10 @@ import iowboleot from '../../assets/fonts/IowanOldStyleBTW03-Bd.eot';
 import iowbolwoff from '../../assets/fonts/IowanOldStyleBTW03-Bd.woff';
 import iowbolwoff2 from '../../assets/fonts/IowanOldStyleBTW03-Bd.woff2';
 
+import iowromeot from '../../assets/fonts/IowanOldStyleBT-Roman.eot';
+import iowromwoff from '../../assets/fonts/IowanOldStyleBT-Roman.woff';
+import iowromwoff2 from '../../assets/fonts/IowanOldStyleBT-Roman.woff2';
+
 export const GlobalStyle = createGlobalStyle`
 @font-face {
     font-family: 'Proxima Nova Bold';
@@ -44,11 +48,22 @@ export const GlobalStyle = createGlobalStyle`
     font-style: normal;
     font-display: swap;
 }
+@font-face {
+    font-family: 'Iowan Old Style Roman';
+    src: url('${iowromeot}');
+    src: url('${iowromeot}?#iefix') format('embedded-opentype'),
+        url('${iowromwoff2}') format('woff2'),
+        url('${iowromwoff}') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
 :root {
     --reg: 'Proxima Nova Regular', sans-serif;
     --bold: 'Proxima Nova Bold', sans-serif;
     --serif: 'Iowan Old Style Bold', serif;
+    --roman: 'Iowan Old Style Roman', serif;
     --headline-1: 3.75rem;
     --headline-2: 2.18rem;
     --headline-3: 1.875rem;
@@ -114,8 +129,6 @@ a {
 }
 
 h1 {
-    font-size: var(--jumbo);
-    font-family: var(--xl-black);
     font-weight: normal;
 }
 h2 {

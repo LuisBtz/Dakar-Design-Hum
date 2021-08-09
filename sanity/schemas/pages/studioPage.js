@@ -7,7 +7,7 @@ export default {
         {   
         name: 'title',
         title: 'Page Title',
-        type: 'string'
+        type: 'singleText'
         },
         {
             name: 'marqueeText',
@@ -51,4 +51,9 @@ export default {
             type: 'imageType'
         }
     ],
+    preview: {
+        select: {
+          title: 'title.en'
+        }
+      }
 }

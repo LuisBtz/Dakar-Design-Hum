@@ -86,6 +86,7 @@ const Paragraph = styled.div`
     p {
         font-size: 0.8125rem;
         width: 45%;
+        font-family: var(--roman);
     }
 
     @media (max-width: 650px) {
