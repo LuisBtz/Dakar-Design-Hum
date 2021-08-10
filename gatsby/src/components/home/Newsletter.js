@@ -64,7 +64,7 @@ class Newsletter extends React.Component {
                     placeholder="SUBSCRIBE"
                     required
                 />
-            <button className="btn_sent" type="submit">≥</button>
+            <button className="btn_sent" type="submit"><img alt='arrow icon' src='./ddh_flecha.svg' /></button>
             </form>
         </div>
 
@@ -90,6 +90,9 @@ const  NewsletterWrapper = styled.section`
                 background-color: var(--yellow);
                 display: block;
                 border: solid 1px black;
+                img {
+                  width: 20px;
+                }
             }
             input {
                 font-family: var(--reg);

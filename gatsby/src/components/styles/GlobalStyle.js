@@ -74,6 +74,7 @@ export const GlobalStyle = createGlobalStyle`
     --blue: #0047BA;
     --red: #FF4438;
     --green: #3DAE2B;
+    --dark-gray: #D8D8D8;
     --purple: #5C0F8B;
     --white: #FFFFFF;
     overflow-wrap: break-word;
@@ -91,13 +92,11 @@ export const GlobalStyle = createGlobalStyle`
         -ms-overflow-style: none;  /* IE and Edge */
         scrollbar-width: none;  /* Firefox */
         font-feature-settings: 'salt' on;
-        padding: 50px 30px;
+        padding: 20px 10px;
+        width: 100vw;
+        overflow-x: hidden;
     }
-    @media (max-width: 780px) {
-      body {
-        padding: 30px 20px;
-      }
-    }
+
     main {
       background: var(--white) !important;
     }

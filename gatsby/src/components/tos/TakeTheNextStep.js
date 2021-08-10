@@ -7,7 +7,7 @@ const TakeTheNextStep = () => {
 
 const data = useStaticQuery(graphql`
     query  {
-        description: sanityInstituteOfDesign {
+        description: sanityTextilesOfSenegal {
             takeBackground {
                 asset {
                     gatsbyImageData(
@@ -93,14 +93,13 @@ const Buttons = styled.div`
         .second {
             font-family: var(--bold);
             background-color: var(--yellow);
+            width: 20%;
             display: block;
             border: solid 1px black;
             display: flex;
             justify-content: center;
-            width: 20%;
             img {
                 width: 20px;
-                align-self: center;
             }
         }
     }

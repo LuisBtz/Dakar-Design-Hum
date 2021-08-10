@@ -35,13 +35,13 @@ const getDataImage = getImage(data.sanityHomePage.takeTheNextStepBackgroundImage
                 <h2>Take the next step</h2>
                 <Buttons>
                     <div className='links'>
-                            <Link className='first' to='institute-of-design'>VISIT</Link><Link className='second' to='institute-of-design'>≥</Link>
+                            <Link className='first' to='institute-of-design'>VISIT</Link><Link className='second' to='institute-of-design'><img alt='arrow icon' src='./ddh_flecha.svg' /></Link>
                     </div>
                     <div className='links'>
-                            <span className='first' >REQUEST INFO</span><span className='second' >≥</span>
+                            <span className='first' >REQUEST INFO</span><span className='second' ><img alt='arrow icon' src='./ddh_flecha.svg' /></span>
                     </div>
                     <div className='links'>
-                            <span className='first' >APPLY NOW</span><span className='second' >≥</span>
+                            <span className='first' >APPLY NOW</span><span className='second' ><img alt='arrow icon' src='./ddh_flecha.svg' /></span>
                     </div>
                 </Buttons>
             </TextoRelative>
@@ -66,7 +66,12 @@ const TextoRelative = styled.div`
     width: calc(100% - 100px);
     h2 {
         color: white;
-        text-align: center;
+    }
+    @media (max-width: 780px) {
+        h2 {
+            color: white;
+            text-align: center;
+        }
     }
 `
 
@@ -78,9 +83,13 @@ const Buttons = styled.div`
     margin-top: 120px;
     .links {
         display: flex;
+        width: 70%;
         a, span{
             padding: 10px;
             cursor: pointer;
+        }
+        img {
+            width: 20px;
         }
         .first {
             font-family: var(--reg);

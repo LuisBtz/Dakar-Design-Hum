@@ -95,7 +95,7 @@ const getDataImage4 = getImage(data.sanityHomePage.manufacturingImage.asset);
                 <div className='contenido'>
                     <h2 className='headline'>{data.sanityHomePage.instituteOfDesignText.en}</h2>
                     <div className='links'>
-                        <Link className='first' to='institute-of-design'>GO</Link><Link className='second' to='institute-of-design'>≥</Link>
+                        <Link className='first' to='institute-of-design'>GO</Link><Link className='second' to='institute-of-design'><img alt='arrow icon' src='./ddh_flecha.svg' /></Link>
                     </div>
                 </div>
 
@@ -109,7 +109,7 @@ const getDataImage4 = getImage(data.sanityHomePage.manufacturingImage.asset);
                 <div className='contenido'>
                     <h2 className='headline'>{data.sanityHomePage.textilesOfSeneglaText.en}</h2>
                     <div className='links'>
-                        <Link className='first' to='textiles-of-senegal'>GO</Link><Link className='second' to='textiles-of-senegal'>≥</Link>
+                        <Link className='first' to='textiles-of-senegal'>GO</Link><Link className='second' to='textiles-of-senegal'><img alt='arrow icon' src='./ddh_flecha.svg' /></Link>
                     </div>
                 </div>
             </Textiles>
@@ -136,7 +136,7 @@ const getDataImage4 = getImage(data.sanityHomePage.manufacturingImage.asset);
                 <div className='contenido'>
                     <h2 className='headline'>{data.sanityHomePage.studioText.en}</h2>
                     <div className='links'>
-                        <Link className='first' to='studio'>GO</Link><Link className='second' to='studio'>≥</Link>
+                        <Link className='first' to='studio'>GO</Link><Link className='second' to='studio'><img alt='arrow icon' src='./ddh_flecha.svg' /></Link>
                     </div>
                 </div>
             </Studio>
@@ -149,7 +149,7 @@ const getDataImage4 = getImage(data.sanityHomePage.manufacturingImage.asset);
                 <div className='contenido'>
                     <h2 className='headline'>{data.sanityHomePage.manufacturingText.en}</h2>
                     <div className='links'>
-                        <Link className='first' to='manufacturing'>GO</Link><Link className='second' to='manufacturing'>≥</Link>
+                        <Link className='first' to='manufacturing'>GO</Link><Link className='second' to='manufacturing'><img alt='arrow icon' src='./ddh_flecha.svg' /></Link>
                     </div>
                 </div>
             </Manufacturing>
@@ -180,7 +180,12 @@ const LinksContainer = styled.section`
             .links {
                 display: flex;
                 a{
-                    padding: 10px;
+                    padding: 10px 20px;
+                    img {
+                        padding: 0;
+                        width: 20px;
+                        align-self: center;
+                    }
                 }
                 .first {
                     font-family: var(--reg);
@@ -192,7 +197,6 @@ const LinksContainer = styled.section`
                 .second {
                     font-family: var(--bold);
                     background-color: var(--yellow);
-                    width: 20%;
                     display: block;
                     border: solid 1px black;
                     display: flex;

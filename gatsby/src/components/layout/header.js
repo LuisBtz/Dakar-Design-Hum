@@ -142,14 +142,15 @@ const Header = () => {
 
 export default Header;
 
-const Nav = styled.nav``
+const Nav = styled.nav`
+`
 
 const NavContainerMobile = styled.div`
     .nav {
-        height: 70px;
         display: grid;
         grid-template-columns: 70px auto 70px;
         border-bottom: solid 1px black;
+        height: auto;
     }
     section nav {
         position: fixed;
@@ -262,7 +263,7 @@ const NavContainerDesktop = styled.ul`
     border-bottom: solid 1px black;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    height: 50px;
+    height: 70px;
     .elemento {
         text-align: center;
         font-family: var(--reg);
@@ -276,7 +277,7 @@ const NavContainerDesktop = styled.ul`
             height: 100%;
             padding: 0 20px;
             text-transform: uppercase;
-            font-size: 0.75rem;
+            font-size: 1rem;
             align-self: center;
             display: flex;
             flex-direction: column;
@@ -297,7 +298,7 @@ const Elemento1 = styled.li`
         display: block;
         height: fit-content;
         align-self: center;
-        width: 60%;
+        width: 85%;
         margin: 0 auto;
     }
     @media (min-width: 1500px) {
