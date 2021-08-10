@@ -29,6 +29,14 @@ const Header = () => {
         showNav(!nav);
       };
 
+
+
+    const [lang, showLang] = useState(false);
+
+    const toggleLang = () => {
+        showLang(!lang);
+      };
+
     return (
         <Nav>
             <NavContainerDesktop>
@@ -114,11 +122,11 @@ const Header = () => {
                         </div>
                     </LogoNavMob>
 
-                    <Lang>
+                    <Lang onClick={toggleLang}>
                         <ul>
-                            <li><Link to='/' className='en'>En</Link></li>
+                            <li><span className='en'>En</span></li>
                             <span>/</span>
-                            <li><Link to='/' className='fr'>Fr</Link></li>
+                            <li><span className='fr'>Fr</span></li>
                         </ul>
                     </Lang>
 
@@ -136,11 +144,87 @@ const Header = () => {
                     <button aria-label="Close navbar" className='overlay' onClick={toggleVisible}></button>
                 </section>
             </NavContainerMobile>
+
+            <LangPopUp className={lang ? null : 'hide'}>
+                <div className='cont'>
+                    <h2>Choose your <strong>language</strong></h2>
+                    <div className='links'>
+                        <div className='link'>
+                            <Link onClick={toggleLang} to='/'>French</Link><Link to='/'><img alt='arrow icon' src='./ddh_flecha.svg' /></Link>
+                        </div>
+                        <div className='link'>
+                            <Link onClick={toggleLang} to='/'>English</Link><Link to='/'><img alt='arrow icon' src='./ddh_flecha.svg' /></Link>
+                        </div>
+                    </div>
+                </div>
+            </LangPopUp>
         </Nav>
     )
 }
 
 export default Header;
+
+const LangPopUp = styled.div`
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 3;
+    .cont {
+        align-self: center;
+        width: 300px;
+        background: var(--dark-gray);
+        padding: 40px;
+        border-radius: 15px;
+        h2 {
+            text-align: center;
+            font-family: var(--roman);
+            padding-bottom: 20px;
+            border-bottom: solid 1px black;
+            strong {
+                font-family: var(--serif);
+            }
+        }
+        .links {
+            margin-top: 30px;
+            .link {
+                margin-bottom: 20px;
+                display: flex;
+                img {
+                    width: 20px;
+                }
+                a {
+                    padding: 10px;
+                    background: var(--yellow);
+                    &:first-child {
+                        width: 80%;
+                        border-left: solid 1px black;
+                        border-top: solid 1px black;
+                        border-bottom: solid 1px black;
+                    }
+                    &:last-child {
+                        width: 20%;
+                        border-right: solid 1px black;
+                        border-left: solid 1px black;
+                        border-top: solid 1px black;
+                        border-bottom: solid 1px black;
+                        display: flex;
+                        flex-direction: column;
+                        justify-self: center;
+                        img {
+                            align-self: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+`
 
 const Nav = styled.nav`
 `
@@ -150,7 +234,7 @@ const NavContainerMobile = styled.div`
         display: grid;
         grid-template-columns: 70px auto 70px;
         border-bottom: solid 1px black;
-        height: auto;
+        height: 70px;
     }
     section nav {
         position: fixed;
@@ -239,6 +323,7 @@ const LogoNavMob = styled.div`
 const Lang = styled.div`
     display: flex;
     justify-content: center;
+    cursor: pointer;
     ul {
         display: flex;
         justify-content: center;
@@ -251,9 +336,10 @@ const Lang = styled.div`
         .en {
             font-family: var(--bold);
         }
-        a {
+        span {
             font-family: var(--reg);
             padding: 0 !important;
+            font-size: 1rem;
         }
     }
 `
