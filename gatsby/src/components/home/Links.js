@@ -182,7 +182,6 @@ const LinksContainer = styled.section`
                 a{
                     padding: 10px 20px;
                     img {
-                        padding: 0;
                         width: 20px;
                         align-self: center;
                     }
@@ -209,8 +208,11 @@ const LinksContainer = styled.section`
     @media (max-width: 750px) {
         .links {
             a   {
-                padding: 5px !important;
+                padding: 10px !important;
             }
+            .second {
+                    width: 20%;
+                }
         }
     }
 

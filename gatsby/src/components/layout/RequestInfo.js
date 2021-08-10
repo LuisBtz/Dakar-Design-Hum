@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components'
 
 const RequestInfo = () => {
 
+    const [close, activeClose] = useState(false);
+
+    const toggleClose = () => {
+        activeClose(!close);
+      };
 
     return (
-            <FormContainer className='reqForm' >
+            <FormContainer className={close ? null : 'hide' } >
                 <div className='contenedor' >
+                    <button onClick={toggleClose} className='close'><span>x</span></button>
                     <h2>Request info</h2>
                     <form name="Request Info" data-netlify="true">
                         <input name='name' type='text' placeholder='Name' />
@@ -34,9 +40,10 @@ const FormContainer = styled.section`
     right: 0;
     bottom: 0;
     left: 0;
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: center;
+
     .contenedor {
         align-self: center;
         width: 650px;
@@ -45,6 +52,23 @@ const FormContainer = styled.section`
         border-radius: 10px;
         position: relative;
         z-index: 2;
+        .close {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            top: 20px;
+            right: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start ;
+            cursor: pointer;
+            span {
+                align-self: flex-end;
+                font-family: var(--reg);
+                font-size: 2rem;
+                line-height: 0.5;
+            }
+        }
         h2 {
             font-family: var(--roman);
             text-align: center;

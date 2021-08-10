@@ -143,4 +143,7 @@ p, a, li, .paragraph {
   line-height: 132%;
 }
 
+.hide {
+  display: none !important;
+}
 `

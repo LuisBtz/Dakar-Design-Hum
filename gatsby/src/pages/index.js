@@ -9,8 +9,6 @@ import Seo from "../components/layout/seo"
 import Links from '../components/home/Links'
 import TakeTheNextStep from "../components/home/TakeTheNextStep"
 import Newsletter from "../components/home/Newsletter"
-import RequestInfo from "../components/layout/RequestInfo"
-import Admission from "../components/layout/Admission"
 
 export const data = graphql`
   query  {
@@ -39,8 +37,6 @@ const IndexPage = ( {data} ) => {
     <Links />
     <TakeTheNextStep />
     <Newsletter/>
-    <RequestInfo />
-    <Admission />
   </Layout>
   )
 }

@@ -83,7 +83,8 @@ const altText = data.sanitySettingsPage.logo.enAlt;
 
 const FooterContainer = styled.footer`
 padding: 50px;
-
+position: relative;
+z-index: 0;
     .logo {
         width: 300px;
     }
