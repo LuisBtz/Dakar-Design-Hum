@@ -179,7 +179,7 @@ const LinksContainer = styled.section`
                 text-transform: uppercase;
                 font-weight: normal;
                 font-style: normal;
-                letter-spacing: 17px;
+                letter-spacing: 16px;
                 -ms-word-break: break-all;
      word-break: break-all;
 
