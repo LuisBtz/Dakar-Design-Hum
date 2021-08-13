@@ -97,6 +97,12 @@ h2 {
     width: 50%;
 }
 
+@media (min-width: 1500px) {
+    h2 {
+      font-size: 4.5vw;
+    }
+}
+
 @media (max-width: 1100px) {
     h2 {
         top: 50%;

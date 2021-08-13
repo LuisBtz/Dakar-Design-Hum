@@ -7,6 +7,8 @@ import prbowoff2 from '../../assets/fonts/ProximaNova-Bold.woff2';
 import proregeot from '../../assets/fonts/ProximaNova-Regular.eot';
 import proregwoff from '../../assets/fonts/ProximaNova-Regular.woff';
 import proregwoff2 from '../../assets/fonts/ProximaNova-Regular.woff2';
+import proregsvg from '../../assets/fonts/ProximaNova-Regular.svg';
+import proregttf from '../../assets/fonts/ProximaNova-Regular.ttf';
 
 import iowboleot from '../../assets/fonts/IowanOldStyleBTW03-Bd.eot';
 import iowbolwoff from '../../assets/fonts/IowanOldStyleBTW03-Bd.woff';
@@ -23,7 +25,7 @@ export const GlobalStyle = createGlobalStyle`
     src: url('${prboeot}?#iefix') format('embedded-opentype'),
         url('${prbowoff2}') format('woff2'),
         url('${prbowoff}') format('woff');
-    font-weight: normal;
+    font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
@@ -32,8 +34,10 @@ export const GlobalStyle = createGlobalStyle`
     src: url('${proregeot}');
     src: url('${proregeot}?#iefix') format('embedded-opentype'),
         url('${proregwoff2}') format('woff2'),
-        url('${proregwoff}') format('woff');
-    font-weight: bold;
+        url('${proregwoff}') format('woff'),
+        url('${proregttf}') format('truetype'),
+        url('${proregsvg}#ProximaNova-Regular') format('svg');
+    font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
@@ -96,6 +100,13 @@ export const GlobalStyle = createGlobalStyle`
         width: 100vw;
         overflow-x: hidden;
     }
+
+  @media (min-width: 1500px) {
+    body {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+}
 
     main {
       background: var(--white) !important;

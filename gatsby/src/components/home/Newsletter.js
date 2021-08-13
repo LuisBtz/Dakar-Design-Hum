@@ -88,7 +88,7 @@ const  NewsletterWrapper = styled.section`
                 padding: 10px 20px;
                 font-family: var(--bold);
                 background-color: var(--yellow);
-                display: block;
+                display: flex;
                 border: solid 1px black;
                 img {
                   width: 20px;

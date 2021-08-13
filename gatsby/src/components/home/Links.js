@@ -176,6 +176,19 @@ const LinksContainer = styled.section`
                 font-family: var(--reg);
                 color: white;
                 font-size: 3.2vw;
+                text-transform: uppercase;
+                font-weight: normal;
+                font-style: normal;
+                letter-spacing: 17px;
+                -ms-word-break: break-all;
+     word-break: break-all;
+
+     /* Non standard for WebKit */
+     word-break: break-word;
+
+-webkit-hyphens: auto;
+   -moz-hyphens: auto;
+        hyphens: auto;
             }
             .links {
                 display: flex;

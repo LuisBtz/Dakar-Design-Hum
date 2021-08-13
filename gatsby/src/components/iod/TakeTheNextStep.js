@@ -164,7 +164,12 @@ const TextoRelative = styled.div`
     width: calc(100% - 100px);
     h2 {
         color: white;
-        text-align: center;
+        text-align: left;
+    }
+    @media (max-width: 780px) {
+        h2 {
+            text-align: center;
+        }
     }
 `
 
@@ -187,6 +192,8 @@ const Buttons = styled.div`
             width: 80%;
             display: block;
             border: solid 1px black;
+            align-self: center;
+            line-height: 1.1;
         }
         .second {
             font-family: var(--bold);
@@ -312,6 +319,7 @@ const FormContainerRequest = styled.section`
                         padding-left: 10px;
                         padding-right: 10px;
                         align-self: center;
+                        display: flex;
                     }
                 }
             }
@@ -435,6 +443,7 @@ const FormContainerAdmissions = styled.section`
                         padding-left: 10px;
                         padding-right: 10px;
                         align-self: center;
+                        display: flex;
                     }
                 }
             }

@@ -117,11 +117,11 @@ const [admissions, showAdmission] = useState(false);
     )
 }
 
+
 const TakeContainer = styled.section`
     position: relative;
     height: 400px;
     width: 100%;
-
     .close {
             position: absolute;
             width: 30px;
@@ -158,7 +158,6 @@ const TakeContainer = styled.section`
             }
         }
 }
-
 `
 
 const TextoRelative = styled.div`
@@ -168,7 +167,12 @@ const TextoRelative = styled.div`
     width: calc(100% - 100px);
     h2 {
         color: white;
-        text-align: center;
+        text-align: left;
+    }
+    @media (max-width: 780px) {
+        h2 {
+            text-align: center;
+        }
     }
 `
 
@@ -191,17 +195,20 @@ const Buttons = styled.div`
             width: 80%;
             display: block;
             border: solid 1px black;
+            align-self: center;
+            line-height: 1.2;
         }
         .second {
             font-family: var(--bold);
             background-color: var(--yellow);
-            width: 20%;
             display: block;
             border: solid 1px black;
             display: flex;
             justify-content: center;
+            width: 20%;
             img {
                 width: 20px;
+                align-self: center;
             }
         }
     }
@@ -213,6 +220,12 @@ const Buttons = styled.div`
         margin-bottom: 50px;
     }
 `
+
+
+
+
+
+
 
 
 
@@ -309,6 +322,7 @@ const FormContainerRequest = styled.section`
                         padding-left: 10px;
                         padding-right: 10px;
                         align-self: center;
+                        display: flex;
                     }
                 }
             }
@@ -432,6 +446,7 @@ const FormContainerAdmissions = styled.section`
                         padding-left: 10px;
                         padding-right: 10px;
                         align-self: center;
+                        display: flex;
                     }
                 }
             }
@@ -458,7 +473,5 @@ const FormContainerAdmissions = styled.section`
     }
 }
 `
-
-
 
 export default TakeTheNextStep

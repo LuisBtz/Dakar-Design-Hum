@@ -37,6 +37,19 @@ const Header = () => {
         showLang(!lang);
       };
 
+
+
+      var pathLink = typeof window !== 'undefined' ? window.location.pathname : ''
+
+      const languages = ['en', 'fr']
+
+      
+
+
+
+
+
+
     return (
         <Nav>
             <NavContainerDesktop>
@@ -95,9 +108,13 @@ const Header = () => {
                 </Elemento5>
                 <Elemento6 className='elemento'>
                     <ul>
-                        <li><Link to='/'  className='en'>En</Link></li>
-                        <span>/</span>
-                        <li><Link to='/' className='fr'>Fr</Link></li>
+                    {languages.map((lng,) => (
+                        <li key={lng}>
+                            <Link to={lng === 'en' ? pathLink : '/fr' + pathLink} language={lng} className={lng}>
+                            {lng === 'en' ? 'En' : 'Fr'}
+                            </Link>
+                        </li>
+                        ))}
                     </ul>
                 </Elemento6>
             </NavContainerDesktop>
@@ -382,16 +399,11 @@ const Elemento1 = styled.li`
     padding: 0 !important;
     .cont {
         display: block;
-        height: fit-content;
         align-self: center;
-        width: 85%;
-        margin: 0 auto;
+        width: 90%;
+        height: auto;
     }
-    @media (min-width: 1500px) {
-        .cont {
-        width: 30%;
-    }
-    }
+
 
 `
 const Elemento2 = styled.li`
@@ -453,7 +465,9 @@ const Elemento6 = styled.li`
             font-family: var(--bold);
         }
         a {
-            padding: 0 !important;
+            text-transform: capitalize !important;
+            padding-left: 1px !important;
+            padding-right: 5px !important;
         }
     }
 `
