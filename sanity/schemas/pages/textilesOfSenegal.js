@@ -171,6 +171,11 @@ export default {
             type: 'singleText'
         },
         {
+            name: 'project8Subtitle',
+            title: 'Project 8 Subtitle',
+            type: 'singleText'
+        },
+        {
             name: 'takeBackground',
             title: 'Take the next step background',
             type: 'imageType'

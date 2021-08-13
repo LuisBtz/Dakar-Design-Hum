@@ -9,6 +9,16 @@ const Description = () => {
     const data = useStaticQuery(graphql`
     query  {
         description: sanityInstituteOfDesign {
+            verticalLogo {
+                enAlt
+                asset {
+                    gatsbyImageData(
+                    layout: FULL_WIDTH
+                    outputPixelDensities: 1.5
+                    placeholder: DOMINANT_COLOR
+                    )
+                }
+            }
             title {
                 en
             }
@@ -35,22 +45,10 @@ const Description = () => {
                 }
             }
         }
-        sanitySettingsPage {
-            verticalLogo {
-                asset {
-                    gatsbyImageData(
-                    layout: FULL_WIDTH
-                    outputPixelDensities: 1.5
-                    placeholder: DOMINANT_COLOR
-                    )
-                }
-                enAlt
-            }
-        } 
     }
     `)
     
-    const getDataImage = getImage(data.sanitySettingsPage.verticalLogo.asset);
+    const getDataImage = getImage(data.description.verticalLogo.asset);
 
     return (
         <ContainerDescription>
@@ -58,7 +56,7 @@ const Description = () => {
                 <div className='logo'>
                     <GatsbyImage
                         image={getDataImage}
-                        alt={data.sanitySettingsPage.verticalLogo.enAlt}
+                        alt={data.description.verticalLogo.enAlt}
                     />
                 </div>
             </div>
