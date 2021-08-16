@@ -95,7 +95,7 @@ const ContainerDescription = styled.section`
         justify-content: center;
         .logo {
             align-self: center;
-            width: 60%;
+            width: 80%;
             padding: 50px;
             box-sizing: border-box;
         }

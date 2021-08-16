@@ -335,6 +335,8 @@ const ContenedorProjects = styled.section`
         border-right: solid 1px black;
         background-color: var(--green);
         color: white;
+        padding-top: 50px;
+        padding-bottom: 50px;
         .content {
             text-align: center;
             position: relative;

@@ -179,16 +179,7 @@ const LinksContainer = styled.section`
                 text-transform: uppercase;
                 font-weight: normal;
                 font-style: normal;
-                letter-spacing: 16px;
-                -ms-word-break: break-all;
-     word-break: break-all;
-
-     /* Non standard for WebKit */
-     word-break: break-word;
-
--webkit-hyphens: auto;
-   -moz-hyphens: auto;
-        hyphens: auto;
+                letter-spacing: 10px;
             }
             .links {
                 display: flex;
@@ -282,6 +273,8 @@ const School = styled.div`
         max-width: 70%;
         align-self: center;
         text-align: center;
+        padding-top: 50px;
+        padding-bottom: 50px;
         span {
             font-family: var(--bold) !important;
             font-size: 6rem;
