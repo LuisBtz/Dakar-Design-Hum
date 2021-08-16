@@ -175,7 +175,7 @@ const LinksContainer = styled.section`
             h2 {
                 font-family: var(--reg);
                 color: white;
-                font-size: 3.2vw;
+                font-size: 2.89vw;
                 text-transform: uppercase;
                 font-weight: normal;
                 font-style: normal;
@@ -225,7 +225,7 @@ const LinksContainer = styled.section`
         grid-template-columns: repeat(1, 1fr);
 
         h2 {
-            font-size: 10vw !important;
+            font-size: 8vw !important;
         }
     }
 
