@@ -195,13 +195,18 @@ const LinksContainer = styled.section`
                     background-color: var(--yellow);
                     width: 80%;
                     display: block;
-                    border: solid 1px black;
+                    border-left: solid 1px black;
+                    border-bottom: solid 1px black;
+                    border-top: solid 1px black;
                 }
                 .second {
                     font-family: var(--bold);
                     background-color: var(--yellow);
                     display: block;
-                    border: solid 1px black;
+                    border-left: solid 1px black;
+                    border-top: solid 1px black;
+                    border-right: solid 1px black;
+                    border-bottom: solid 1px black;
                     display: flex;
                     justify-content: center;
                 }
