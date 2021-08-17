@@ -157,4 +157,14 @@ p, a, li, .paragraph {
 .hide {
   display: none !important;
 }
+
+
+input {
+  border-radius: 0;
+}
+
+input[type="search"] {
+  -webkit-appearance: none;
+}
+
 `
