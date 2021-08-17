@@ -177,30 +177,36 @@ const Buttons = styled.div`
     .links {
         display: flex;
         width: 70%;
+        height: fit-content;
+        border: solid 1px black;
         a, span{
             padding: 10px;
             cursor: pointer;
         }
         img {
             width: 20px;
+            align-self: center;
         }
         .first {
             font-family: var(--reg);
             background-color: var(--yellow);
             width: 80%;
             display: block;
-            border: solid 1px black;
             align-self: center;
-            line-height: 1.1;
+            line-height: 1.2;
         }
         .second {
             font-family: var(--bold);
             background-color: var(--yellow);
             width: 20%;
             display: block;
-            border: solid 1px black;
+            border-left: solid 1px black;
             display: flex;
+            flex-direction: row;
             justify-content: center;
+            img {
+                align-self: center;
+            }
         }
     }
 
@@ -303,6 +309,7 @@ const FormContainerRequest = styled.section`
                 span {
                     img {
                         width: 20px;
+                        align-self: center;
                     }
                     display: block;
                     box-sizing: border-box;
@@ -428,6 +435,7 @@ const FormContainerAdmissions = styled.section`
                 span {
                     img {
                         width: 20px;
+                        align-self: center;
                     }
                     display: block;
                     box-sizing: border-box;

@@ -185,6 +185,7 @@ const Buttons = styled.div`
     .links {
         display: flex;
         width: 70%;
+        border: solid 1px black;
         a, span{
             padding: 10px;
             cursor: pointer;
@@ -194,7 +195,6 @@ const Buttons = styled.div`
             background-color: var(--yellow);
             width: 80%;
             display: block;
-            border: solid 1px black;
             align-self: center;
             line-height: 1.2;
         }
@@ -203,11 +203,12 @@ const Buttons = styled.div`
             background-color: var(--yellow);
             width: 20%;
             display: block;
-            border: solid 1px black;
+            border-left: solid 1px black;
             display: flex;
             justify-content: center;
             img {
                 width: 20px;
+                align-self: center;
             }
         }
     }
@@ -306,6 +307,7 @@ const FormContainerRequest = styled.section`
                 span {
                     img {
                         width: 20px;
+                        align-self: center;
                     }
                     display: block;
                     box-sizing: border-box;
@@ -430,6 +432,7 @@ const FormContainerAdmissions = styled.section`
                 span {
                     img {
                         width: 20px;
+                        align-self: center;
                     }
                     display: block;
                     box-sizing: border-box;
