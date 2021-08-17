@@ -159,8 +159,9 @@ p, a, li, .paragraph {
 }
 
 
-input {
+input, textarea {
   border-radius: 0;
+  -webkit-appearance: none;
 }
 
 input[type="search"] {
