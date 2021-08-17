@@ -48,13 +48,13 @@ const [admissions, showAdmission] = useState(false);
                 <h2>Take the next step</h2>
                 <Buttons>
                     <div className='links'>
-                            <Link className='first' to='institute-of-design'>VISIT</Link><Link className='second' to='institute-of-design'><img alt='arrow icon' src='./ddh_flecha.svg' /></Link>
+                            <Link className='first' to='institute-of-design'>VISIT</Link><Link className='second' to='institute-of-design'><img alt='arrow icon' src='/ddh_flecha.svg' /></Link>
                     </div>
                     <div className='links' aria-hidden="true" onMouseDown={toggleRequest}>
-                            <span className='first' >REQUEST INFO</span><span className='second' ><img alt='arrow icon' src='./ddh_flecha.svg' /></span>
+                            <span className='first' >REQUEST INFO</span><span className='second' ><img alt='arrow icon' src='/ddh_flecha.svg' /></span>
                     </div>
                     <div className='links' aria-hidden="true" onMouseDown={toggleAdmission}>
-                            <span className='first' >APPLY NOW</span><span className='second' ><img alt='arrow icon' src='./ddh_flecha.svg' /></span>
+                            <span className='first' >APPLY NOW</span><span className='second' ><img alt='arrow icon' src='/ddh_flecha.svg' /></span>
                     </div>
                 </Buttons>
             </TextoRelative>

@@ -16,7 +16,7 @@ const data = useStaticQuery(graphql`
                     placeholder: DOMINANT_COLOR
                     )
                 }
-                enAlt
+                frAlt
             }
         }
     }
@@ -45,19 +45,19 @@ const [admissions, showAdmission] = useState(false);
             <GatsbyImage
                 style={{ height: "100%", width: "100%" }}
                 image={getDataImage}
-                alt={data.description.takeBackground.enAlt}
+                alt={data.description.takeBackground.frAlt}
             />
             <TextoRelative>
                 <h2>Take the next step</h2>
                 <Buttons>
                     <div className='links'>
-                            <Link className='first' to='institute-of-design'>VISIT</Link><Link className='second' to='institute-of-design'><img alt='arrow icon' src='/ddh_flecha.svg' /></Link>
+                            <Link className='first' to='/fr/institute-of-design'>VISITE</Link><Link className='second' to='/fr/institute-of-design'><img alt='arrow icon' src='/ddh_flecha.svg' /></Link>
                     </div>
                     <div className='links' aria-hidden="true" onMouseDown={toggleRequest}>
-                            <span className='first' >REQUEST INFO</span><span className='second' ><img alt='arrow icon' src='/ddh_flecha.svg' /></span>
+                            <span className='first' >DEMANDE D'INFO</span><span className='second' ><img alt='arrow icon' src='/ddh_flecha.svg' /></span>
                     </div>
                     <div className='links' aria-hidden="true" onMouseDown={toggleAdmission}>
-                            <span className='first' >APPLY NOW</span><span className='second' ><img alt='arrow icon' src='/ddh_flecha.svg' /></span>
+                            <span className='first' >APPLIQUER MAINTENANT</span><span className='second' ><img alt='arrow icon' src='/ddh_flecha.svg' /></span>
                     </div>
                 </Buttons>
             </TextoRelative>
@@ -69,20 +69,20 @@ const [admissions, showAdmission] = useState(false);
             <FormContainerRequest className={request ? null : 'hide' } >
                 <div className='contenedor' >
                     <button onMouseDown={toggleRequest} className='close'><span>X</span></button>
-                    <h2>Request info</h2>
-                    <form name="Request Info" data-netlify="true">
-                        <input name='name' type='text' placeholder='Name' />
+                    <h2>Demande d'info</h2>
+                    <form name="Demande d'info Fr" data-netlify="true">
+                        <input name='name' type='text' placeholder='Nom' />
                         <div className='columns'>
                             <div>
                                 <input name='email' type='email' placeholder='Email' />
                             </div>
                             <div>
-                                <input name='region' type='text' placeholder='Region' />
+                                <input name='region' type='text' placeholder='Région' />
                             </div>
                         </div>
-                        <label htmlFor='textarea' >Message</label>
+                        <label htmlFor='textarea' >Un message</label>
                         <textarea id='textarea' name='message' />
-                        <button type="submit"><span>Send</span><span><img alt='arrow icon' src='/ddh_flecha.svg' /></span></button>
+                        <button type="submit"><span>Envoyer</span><span><img alt='arrow icon' src='/ddh_flecha.svg' /></span></button>
                     </form>
                 </div>
             </FormContainerRequest>
@@ -92,18 +92,18 @@ const [admissions, showAdmission] = useState(false);
                 <div className='contenedor' >
                     <button onMouseDown={toggleAdmission} className='close'><span>X</span></button>
                     <h2>Admissions</h2>
-                    <form name="Admissions" data-netlify="true">
-                        <input name='name' type='text' placeholder='Name' />
+                    <form name="Admissions Fr" data-netlify="true">
+                        <input name='name' type='text' placeholder='Nom' />
                         <div className='columns'>
                             <div>
                                 <input name='email' type='email' placeholder='Email' />
                             </div>
                             <div>
-                                <input name='region' type='text' placeholder='Region' />
+                                <input name='region' type='text' placeholder='Région' />
                             </div>
                         </div>
-                        <input name='program' type='text' placeholder='Program' />
-                        <button type="submit"><span>Send</span><span><img alt='arrow icon' src='/ddh_flecha.svg' /></span></button>
+                        <input name='program' type='text' placeholder='Programme' />
+                        <button type="submit"><span>Envoyer</span><span><img alt='arrow icon' src='/ddh_flecha.svg' /></span></button>
                     </form>
                 </div>
             </FormContainerAdmissions>

@@ -7,22 +7,22 @@ const TakeTheNextStep = () => {
 
 const data = useStaticQuery(graphql`
     query  {
-        description: sanityStudioPage {
-            takeBackground {
+        sanityHomePage {
+            takeTheNextStepBackgroundImage {
+                frAlt
                 asset {
                     gatsbyImageData(
-                    layout: FULL_WIDTH
-                    outputPixelDensities: 1.5
-                    placeholder: DOMINANT_COLOR
+                        layout: FULL_WIDTH
+                        outputPixelDensities: 1.5
+                        placeholder: DOMINANT_COLOR
                     )
                 }
-                enAlt
             }
         }
     }
 `)
 
-const getDataImage = getImage(data.description.takeBackground.asset);
+const getDataImage = getImage(data.sanityHomePage.takeTheNextStepBackgroundImage.asset);
 
 
 const [request, showRequest] = useState(false);
@@ -31,58 +31,51 @@ const [request, showRequest] = useState(false);
         showRequest(!request);
       };
 
-
-
 const [admissions, showAdmission] = useState(false);
 
     const toggleAdmission = () => {
         showAdmission(!admissions);
       };
 
-
     return(
         <TakeContainer>
             <GatsbyImage
                 style={{ height: "100%", width: "100%" }}
                 image={getDataImage}
-                alt={data.description.takeBackground.enAlt}
+                alt={data.sanityHomePage.takeTheNextStepBackgroundImage.frAlt}
             />
             <TextoRelative>
-                <h2>Take the next step</h2>
+                <h2>Passez à l'étape suivante</h2>
                 <Buttons>
                     <div className='links'>
-                            <Link className='first' to='institute-of-design'>VISIT</Link><Link className='second' to='institute-of-design'><img alt='arrow icon' src='/ddh_flecha.svg' /></Link>
+                            <Link className='first' to='/fr/institute-of-design'>VISITE</Link><Link className='second' to='/fr/institute-of-design'><img alt='arrow icon' src='/ddh_flecha.svg' /></Link>
                     </div>
                     <div className='links' aria-hidden="true" onMouseDown={toggleRequest}>
-                            <span className='first' >REQUEST INFO</span><span className='second' ><img alt='arrow icon' src='/ddh_flecha.svg' /></span>
+                            <span className='first' >DEMANDE D'INFO</span><span className='second' ><img alt='arrow icon' src='/ddh_flecha.svg' /></span>
                     </div>
                     <div className='links' aria-hidden="true" onMouseDown={toggleAdmission}>
-                            <span className='first' >APPLY NOW</span><span className='second' ><img alt='arrow icon' src='/ddh_flecha.svg' /></span>
+                            <span className='first' >APPLIQUER MAINTENANT</span><span className='second' ><img alt='arrow icon' src='/ddh_flecha.svg' /></span>
                     </div>
                 </Buttons>
             </TextoRelative>
 
-
-
-
-
             <FormContainerRequest className={request ? null : 'hide' } >
                 <div className='contenedor' >
                     <button onMouseDown={toggleRequest} className='close'><span>X</span></button>
-                    <h2>Request info</h2>
-                    <form name="Request Info" data-netlify="true">
-                        <input name='name' type='text' placeholder='Name' />
+                    <h2>Demande d'info</h2>
+                    <form name="Demande d'info Fr" data-netlify="true">
+                        <input name='name' type='text' placeholder='Nom' />
                         <div className='columns'>
                             <div>
                                 <input name='email' type='email' placeholder='Email' />
                             </div>
                             <div>
-                                <input name='region' type='text' placeholder='Region' />
+                                <input name='region' type='text' placeholder='Région' />
                             </div>
                         </div>
-                        <label htmlFor='textarea' >Message</label>
+                        <label htmlFor='textarea' >Un message</label>
                         <textarea id='textarea' name='message' />
-                        <button type="submit"><span>Send</span><span><img alt='arrow icon' src='/ddh_flecha.svg' /></span></button>
+                        <button type="submit"><span>Envoyer</span><span><img alt='arrow icon' src='/ddh_flecha.svg' /></span></button>
                     </form>
                 </div>
             </FormContainerRequest>
@@ -92,21 +85,23 @@ const [admissions, showAdmission] = useState(false);
                 <div className='contenedor' >
                     <button onMouseDown={toggleAdmission} className='close'><span>X</span></button>
                     <h2>Admissions</h2>
-                    <form name="Admissions" data-netlify="true">
-                        <input name='name' type='text' placeholder='Name' />
+                    <form name="Admissions Fr" data-netlify="true">
+                        <input name='name' type='text' placeholder='Nom' />
                         <div className='columns'>
                             <div>
                                 <input name='email' type='email' placeholder='Email' />
                             </div>
                             <div>
-                                <input name='region' type='text' placeholder='Region' />
+                                <input name='region' type='text' placeholder='Région' />
                             </div>
                         </div>
-                        <input name='program' type='text' placeholder='Program' />
-                        <button type="submit"><span>Send</span><span><img alt='arrow icon' src='/ddh_flecha.svg' /></span></button>
+                        <input name='program' type='text' placeholder='Programme' />
+                        <button type="submit"><span>Envoyer</span><span><img alt='arrow icon' src='/ddh_flecha.svg' /></span></button>
                     </form>
                 </div>
             </FormContainerAdmissions>
+
+
         </TakeContainer>
     )
 }
@@ -115,6 +110,8 @@ const TakeContainer = styled.section`
     position: relative;
     height: 400px;
     width: 100%;
+
+
 
     .close {
             position: absolute;
@@ -133,6 +130,7 @@ const TakeContainer = styled.section`
                 line-height: 0.5;
             }
         }
+
 @media (max-width: 780px) {
     height: 450px;
     .close {
@@ -152,8 +150,6 @@ const TakeContainer = styled.section`
             }
         }
 }
-
-
 `
 
 const TextoRelative = styled.div`
@@ -163,14 +159,13 @@ const TextoRelative = styled.div`
     width: calc(100% - 100px);
     h2 {
         color: white;
-        text-align: left;
     }
-
-@media (max-width: 780px) {
-    h2 {
-        text-align: center;
+    @media (max-width: 780px) {
+        h2 {
+            color: white;
+            text-align: center;
+        }
     }
-}
 `
 
 const Buttons = styled.div`
@@ -186,6 +181,9 @@ const Buttons = styled.div`
             padding: 10px;
             cursor: pointer;
         }
+        img {
+            width: 20px;
+        }
         .first {
             font-family: var(--reg);
             background-color: var(--yellow);
@@ -193,7 +191,7 @@ const Buttons = styled.div`
             display: block;
             border: solid 1px black;
             align-self: center;
-            line-height: 1.2;
+            line-height: 1.1;
         }
         .second {
             font-family: var(--bold);
@@ -203,11 +201,15 @@ const Buttons = styled.div`
             border: solid 1px black;
             display: flex;
             justify-content: center;
-            img {
-                width: 20px;
-            }
         }
     }
+
+    @media (max-width: 900px) {
+        .links {
+            width: 100% !important;
+        }
+    }
+
     @media (max-width: 780px) {
         grid-template-columns: repeat(1, 1fr);
         width: 100%;
@@ -216,6 +218,7 @@ const Buttons = styled.div`
         margin-bottom: 50px;
     }
 `
+
 
 
 
@@ -366,6 +369,7 @@ const FormContainerAdmissions = styled.section`
         background-color: var(--dark-gray);
         border-radius: 10px;
         position: relative;
+        z-index: 2;
         h2 {
             font-family: var(--roman);
             text-align: center;
@@ -465,6 +469,5 @@ const FormContainerAdmissions = styled.section`
     }
 }
 `
-
 
 export default TakeTheNextStep

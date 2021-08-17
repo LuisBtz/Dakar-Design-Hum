@@ -16,13 +16,13 @@ const Links = () => {
                     placeholder: DOMINANT_COLOR
                     )
                 }
-                enAlt
+                frAlt
             }
             instituteOfDesignText {
-                en
+                fr
             }
             textilesOfSeneglaImage {
-                enAlt
+                frAlt
                 asset {
                     gatsbyImageData(
                     placeholder: DOMINANT_COLOR
@@ -32,25 +32,25 @@ const Links = () => {
                 }
             }
             textilesOfSeneglaText {
-                en
+                fr
             }
             word1 {
-                en
+                fr
             }
             word2 {
-                en
+                fr
             }
             word3 {
-                en
+                fr
             }
             quote {
-                en
+                fr
             }
             quoteFrom {
-                en
+                fr
             }
             studioImage {
-                enAlt
+                frAlt
                 asset {
                     gatsbyImageData(
                     layout: FULL_WIDTH
@@ -60,10 +60,10 @@ const Links = () => {
                 }
             }
             studioText {
-                en
+                fr
             }
             manufacturingImage {
-                enAlt
+                frAlt
                 asset {
                     gatsbyImageData(
                     placeholder: DOMINANT_COLOR
@@ -73,7 +73,7 @@ const Links = () => {
                 }
             }
             manufacturingText {
-                en
+                fr
             }
         }
     }
@@ -90,12 +90,12 @@ const getDataImage4 = getImage(data.sanityHomePage.manufacturingImage.asset);
                 <GatsbyImage
                     style={{ height: "100%", width: "100%" }}
                     image={getDataImage1}
-                    alt={data.sanityHomePage.instituteOfDesignImage.enAlt}
+                    alt={data.sanityHomePage.instituteOfDesignImage.frAlt}
                 />
                 <div className='contenido'>
-                    <h2 className='headline'>{data.sanityHomePage.instituteOfDesignText.en}</h2>
+                    <h2 className='headline'>{data.sanityHomePage.instituteOfDesignText.fr}</h2>
                     <div className='links'>
-                        <Link className='first' to='institute-of-design'>GO</Link><Link className='second' to='institute-of-design'><img alt='arrow icon' src='/ddh_flecha.svg' /></Link>
+                        <Link className='first' to='/fr/institute-of-design'>GO</Link><Link className='second' to='institute-of-design'><img alt='arrow icon' src='/ddh_flecha.svg' /></Link>
                     </div>
                 </div>
 
@@ -104,39 +104,39 @@ const getDataImage4 = getImage(data.sanityHomePage.manufacturingImage.asset);
                 <GatsbyImage
                     style={{ height: "100%", width: "100%" }}
                     image={getDataImage2}
-                    alt={data.sanityHomePage.instituteOfDesignImage.enAlt}
+                    alt={data.sanityHomePage.instituteOfDesignImage.frAlt}
                 />
                 <div className='contenido'>
-                    <h2 className='headline'>{data.sanityHomePage.textilesOfSeneglaText.en}</h2>
+                    <h2 className='headline'>{data.sanityHomePage.textilesOfSeneglaText.fr}</h2>
                     <div className='links'>
-                        <Link className='first' to='textiles-of-senegal'>GO</Link><Link className='second' to='textiles-of-senegal'><img alt='arrow icon' src='/ddh_flecha.svg' /></Link>
+                        <Link className='first' to='/fr/textiles-of-senegal'>GO</Link><Link className='second' to='textiles-of-senegal'><img alt='arrow icon' src='/ddh_flecha.svg' /></Link>
                     </div>
                 </div>
             </Textiles>
             <Design className='element'>
                 <ul>
-                    <li>{data.sanityHomePage.word1.en}</li>
-                    <li>{data.sanityHomePage.word2.en}</li>
-                    <li>{data.sanityHomePage.word3.en}</li>
+                    <li>{data.sanityHomePage.word1.fr}</li>
+                    <li>{data.sanityHomePage.word2.fr}</li>
+                    <li>{data.sanityHomePage.word3.fr}</li>
                 </ul>
             </Design>
             <School className='element'>
                 <div className='quote'>
                     <span>“</span>
-                    <h2>{data.sanityHomePage.quote.en}</h2>
-                    <p>{data.sanityHomePage.quoteFrom.en}</p>
+                    <h2>{data.sanityHomePage.quote.fr}</h2>
+                    <p>{data.sanityHomePage.quoteFrom.fr}</p>
                 </div>
             </School>
             <Studio className='element'>
                 <GatsbyImage
                     style={{ height: "100%", width: "100%" }}
                     image={getDataImage3}
-                    alt={data.sanityHomePage.instituteOfDesignImage.enAlt}
+                    alt={data.sanityHomePage.instituteOfDesignImage.frAlt}
                 />
                 <div className='contenido'>
-                    <h2 className='headline'>{data.sanityHomePage.studioText.en}</h2>
+                    <h2 className='headline'>{data.sanityHomePage.studioText.fr}</h2>
                     <div className='links'>
-                        <Link className='first' to='studio'>GO</Link><Link className='second' to='studio'><img alt='arrow icon' src='/ddh_flecha.svg' /></Link>
+                        <Link className='first' to='/fr/studio'>GO</Link><Link className='second' to='studio'><img alt='arrow icon' src='/ddh_flecha.svg' /></Link>
                     </div>
                 </div>
             </Studio>
@@ -144,12 +144,12 @@ const getDataImage4 = getImage(data.sanityHomePage.manufacturingImage.asset);
                 <GatsbyImage
                     style={{ height: "100%", width: "100%" }}
                     image={getDataImage4}
-                    alt={data.sanityHomePage.instituteOfDesignImage.enAlt}
+                    alt={data.sanityHomePage.instituteOfDesignImage.frAlt}
                 />
                 <div className='contenido'>
-                    <h2 className='headline'>{data.sanityHomePage.manufacturingText.en}</h2>
+                    <h2 className='headline'>{data.sanityHomePage.manufacturingText.fr}</h2>
                     <div className='links'>
-                        <Link className='first' to='manufacturing'>GO</Link><Link className='second' to='manufacturing'><img alt='arrow icon' src='/ddh_flecha.svg' /></Link>
+                        <Link className='first' to='/fr/manufacturing'>GO</Link><Link className='second' to='manufacturing'><img alt='arrow icon' src='/ddh_flecha.svg' /></Link>
                     </div>
                 </div>
             </Manufacturing>

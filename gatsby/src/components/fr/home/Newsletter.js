@@ -9,7 +9,7 @@ class Newsletter extends React.Component {
   constructor() {
     super()
     this.state = {
-      message: "Subscribe to our newsletter",
+      message: "Abonnez-vous à notre newsletter",
       name: "",
       email: "",
       result: null,
@@ -61,7 +61,7 @@ class Newsletter extends React.Component {
                     name="EMAIL"
                     id="mce-EMAIL"
                     className="subscribe-email"
-                    placeholder="SUBSCRIBE"
+                    placeholder="S'ABONNER"
                     required
                 />
             <button className="btn_sent" type="submit"><img alt='arrow icon' src='/ddh_flecha.svg' /></button>

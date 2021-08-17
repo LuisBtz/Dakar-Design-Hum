@@ -55,13 +55,13 @@ const [admissions, showAdmission] = useState(false);
                 <h2>Take the next step</h2>
                 <Buttons>
                     <div className='links'>
-                            <Link className='first' to='institute-of-design'>VISIT</Link><Link className='second' to='institute-of-design'><img alt='arrow icon' src='./ddh_flecha.svg' /></Link>
+                            <Link className='first' to='institute-of-design'>VISIT</Link><Link className='second' to='institute-of-design'><img alt='arrow icon' src='/ddh_flecha.svg' /></Link>
                     </div>
                     <div className='links' aria-hidden="true" onMouseDown={toggleRequest}>
-                            <span className='first' >REQUEST INFO</span><span className='second' ><img alt='arrow icon' src='./ddh_flecha.svg' /></span>
+                            <span className='first' >REQUEST INFO</span><span className='second' ><img alt='arrow icon' src='/ddh_flecha.svg' /></span>
                     </div>
                     <div className='links' aria-hidden="true" onMouseDown={toggleAdmission}>
-                            <span className='first' >APPLY NOW</span><span className='second' ><img alt='arrow icon' src='./ddh_flecha.svg' /></span>
+                            <span className='first' >APPLY NOW</span><span className='second' ><img alt='arrow icon' src='/ddh_flecha.svg' /></span>
                     </div>
                 </Buttons>
             </TextoRelative>
@@ -85,7 +85,7 @@ const [admissions, showAdmission] = useState(false);
                         </div>
                         <label htmlFor='textarea' >Message</label>
                         <textarea id='textarea' name='message' />
-                        <button type="submit"><span>Send</span><span><img alt='arrow icon' src='./ddh_flecha.svg' /></span></button>
+                        <button type="submit"><span>Send</span><span><img alt='arrow icon' src='/ddh_flecha.svg' /></span></button>
                     </form>
                 </div>
             </FormContainerRequest>
@@ -106,7 +106,7 @@ const [admissions, showAdmission] = useState(false);
                             </div>
                         </div>
                         <input name='program' type='text' placeholder='Program' />
-                        <button type="submit"><span>Send</span><span><img alt='arrow icon' src='./ddh_flecha.svg' /></span></button>
+                        <button type="submit"><span>Send</span><span><img alt='arrow icon' src='/ddh_flecha.svg' /></span></button>
                     </form>
                 </div>
             </FormContainerAdmissions>

@@ -12,14 +12,14 @@ const Header = () => {
                 asset {
                     gatsbyImageData(layout: FULL_WIDTH, outputPixelDensities: 1.5, placeholder: BLURRED)
                 }
-                enAlt
+                frAlt
             }
         }
     }
     `)
 
     const getDataImage = getImage(data.sanitySettingsPage.logo.asset);
-    const altText = data.sanitySettingsPage.logo.enAlt;
+    const altText = data.sanitySettingsPage.logo.frAlt;
 
 
 
@@ -39,9 +39,10 @@ const Header = () => {
 
 
 
-      var pathLink = typeof window !== 'undefined' ? window.location.pathname : ''
+    var pathLink = typeof window !== 'undefined' ? window.location.pathname : ''
+    const pathEn = pathLink.replace('/fr', '')
 
-      const languages = ['en', 'fr']
+    const languages = ['en', 'fr']
 
       
 
@@ -54,7 +55,7 @@ const Header = () => {
         <Nav>
             <NavContainerDesktop>
                 <Elemento1 className='elemento'>
-                    <Link to='/'>
+                    <Link to='/fr/'>
                         <div className='cont'>
                             <GatsbyImage
                                 image={getDataImage}
@@ -65,28 +66,28 @@ const Header = () => {
                 </Elemento1>
                 <Elemento2 className='elemento'>
                     <Link 
-                    to='/institute-of-design'
+                    to='/fr/institute-of-design'
                     activeStyle={{
                         backgroundColor: 'var(--blue)',
                         color: 'white',
                         fontFamily: 'var(--bold)'
                     }}
-                    >Institute of design</Link>
+                    >Institut de design</Link>
                 </Elemento2>
                 <Elemento3 className='elemento'>
                     <Link 
-                    to='/textiles-of-senegal'
+                    to='/fr/textiles-of-senegal'
                     activeStyle={{
                         backgroundColor: 'var(--purple)',
                         color: 'white',
                         fontFamily: 'var(--bold)'
                         
                     }}
-                    >TEXTILES OF SENEGAL</Link>
+                    >TEXTILES DU SENEGAL</Link>
                 </Elemento3>
                 <Elemento4 className='elemento'>
                     <Link 
-                    to='/studio'
+                    to='/fr/studio'
                     activeStyle={{
                         backgroundColor: 'var(--red)',
                         color: 'white',
@@ -97,20 +98,20 @@ const Header = () => {
                 </Elemento4>
                 <Elemento5 className='elemento'>
                     <Link 
-                    to='/manufacturing'
+                    to='/fr/manufacturing'
                     activeStyle={{
                         backgroundColor: 'var(--green)',
                         color: 'white',
                         fontFamily: 'var(--bold)'
                         
                     }}
-                    >MANUFACTURING</Link>
+                    >FABRICATION</Link>
                 </Elemento5>
                 <Elemento6 className='elemento'>
                     <ul>
                     {languages.map((lng,) => (
                         <li key={lng}>
-                            <Link to={lng === 'en' ? pathLink : '/fr' + pathLink} language={lng} className={lng}>
+                            <Link to={lng === 'en' ? pathEn : pathLink} language={lng} className={lng}>
                             {lng === 'en' ? 'En /' : 'Fr'}
                             </Link>
                         </li>
@@ -150,12 +151,12 @@ const Header = () => {
                 </div>
                 <section className={nav ? 'active' : ''}>
                     <nav>
-                        <h4>Programs</h4>
+                        <h4>Programmes</h4>
                         <ul>
-                            <li><Link  to='/institute-of-design' onClick={toggleVisible}>ACADEMY</Link></li>
+                            <li><Link  to='/institute-of-design' onClick={toggleVisible}>ACADÉMIE</Link></li>
                             <li><Link to='/textiles-of-senegal' onClick={toggleVisible}>TEXTILES</Link></li>
                             <li><Link to='/studio' onClick={toggleVisible}>STUDIO</Link></li>
-                            <li><Link to='/manufacturing' onClick={toggleVisible}>MANUFACTURING</Link></li>
+                            <li><Link to='/manufacturing' onClick={toggleVisible}>FABRICATION</Link></li>
                         </ul>
                     </nav>
                     <button aria-label="Close navbar" className='overlay' onClick={toggleVisible}></button>
@@ -164,10 +165,10 @@ const Header = () => {
 
             <LangPopUp className={lang ? null : 'hide'}>
                 <div className='cont'>
-                    <h2>Choose your <strong>language</strong></h2>
+                    <h2>Choisissez votre <strong>langue</strong></h2>
                     <div className='links'>
                         <div className='link'>
-                            <Link onClick={toggleLang} to='/fr/'>French</Link><Link to='/fr/'><img alt='arrow icon' src='/ddh_flecha.svg' /></Link>
+                            <Link onClick={toggleLang} to='/fr/'>français</Link><Link to='/fr/'><img alt='arrow icon' src='/ddh_flecha.svg' /></Link>
                         </div>
                         <div className='link'>
                             <Link onClick={toggleLang} to='/'>English</Link><Link to='/'><img alt='arrow icon' src='/ddh_flecha.svg' /></Link>
@@ -461,7 +462,7 @@ const Elemento6 = styled.li`
             font-size: 0.75rem;
             align-self: baseline;
         }
-        .en {
+        .fr {
             font-family: var(--bold);
         }
         a {
