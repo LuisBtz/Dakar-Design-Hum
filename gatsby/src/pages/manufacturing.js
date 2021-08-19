@@ -28,7 +28,7 @@ export const data = graphql`
 `
 
 // markup
-const IndexPage = ({data}) => {
+const ManufacturingPage = ({data}) => {
   return (
     <Layout >
     <Seo title={data.seo.title.en} description={data.seo.marqueeText.en} image={data.seo.takeBackground.asset.url} />
@@ -41,4 +41,4 @@ const IndexPage = ({data}) => {
   )
 }
 
-export default IndexPage
+export default ManufacturingPage

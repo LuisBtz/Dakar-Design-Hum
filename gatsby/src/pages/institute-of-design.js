@@ -30,7 +30,7 @@ export const data = graphql`
 `
 
 // markup
-const IndexPage = ( {data} ) => {
+const InstitutePage = ( {data} ) => {
 
   return (
   <Layout >
@@ -44,4 +44,4 @@ const IndexPage = ( {data} ) => {
   )
 }
 
-export default IndexPage
+export default InstitutePage

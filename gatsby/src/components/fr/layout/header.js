@@ -72,18 +72,18 @@ const Header = () => {
                         color: 'white',
                         fontFamily: 'var(--bold)'
                     }}
-                    >Institut de design</Link>
+                    >Institut</Link>
                 </Elemento2>
                 <Elemento3 className='elemento'>
                     <Link 
                     to='/fr/textiles-of-senegal'
                     activeStyle={{
-                        backgroundColor: 'var(--purple)',
+                        backgroundColor: 'var(--yellow)',
                         color: 'white',
                         fontFamily: 'var(--bold)'
                         
                     }}
-                    >TEXTILES DU SENEGAL</Link>
+                    >TEXTILES</Link>
                 </Elemento3>
                 <Elemento4 className='elemento'>
                     <Link 
@@ -108,6 +108,17 @@ const Header = () => {
                     >FABRICATION</Link>
                 </Elemento5>
                 <Elemento6 className='elemento'>
+                    <Link 
+                    to='/fr/movility'
+                    activeStyle={{
+                        backgroundColor: 'var(--purple)',
+                        color: 'white',
+                        fontFamily: 'var(--bold)'
+                        
+                    }}
+                    >mobilité</Link>
+                </Elemento6>
+                <Elemento7 className='elemento'>
                     <ul>
                     {languages.map((lng,) => (
                         <li key={lng}>
@@ -117,7 +128,7 @@ const Header = () => {
                         </li>
                         ))}
                     </ul>
-                </Elemento6>
+                </Elemento7>
             </NavContainerDesktop>
 
 
@@ -153,10 +164,11 @@ const Header = () => {
                     <nav>
                         <h4>Programmes</h4>
                         <ul>
-                            <li><Link  to='/institute-of-design' onClick={toggleVisible}>ACADÉMIE</Link></li>
-                            <li><Link to='/textiles-of-senegal' onClick={toggleVisible}>TEXTILES</Link></li>
-                            <li><Link to='/studio' onClick={toggleVisible}>STUDIO</Link></li>
-                            <li><Link to='/manufacturing' onClick={toggleVisible}>FABRICATION</Link></li>
+                            <li><Link  to='/fr/institute-of-design' onClick={toggleVisible}>ACADÉMIE</Link></li>
+                            <li><Link to='/fr/textiles-of-senegal' onClick={toggleVisible}>TEXTILES</Link></li>
+                            <li><Link to='/fr/studio' onClick={toggleVisible}>STUDIO</Link></li>
+                            <li><Link to='/fr/manufacturing' onClick={toggleVisible}>FABRICATION</Link></li>
+                            <li><Link to='/fr/mobility' onClick={toggleVisible}>MOBILITÉ</Link></li>
                         </ul>
                     </nav>
                     <button aria-label="Close navbar" className='overlay' onClick={toggleVisible}></button>
@@ -366,7 +378,7 @@ const Lang = styled.div`
 const NavContainerDesktop = styled.ul`
     border-bottom: solid 1px black;
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(16, 1fr);
     height: 70px;
     .elemento {
         text-align: center;
@@ -381,7 +393,7 @@ const NavContainerDesktop = styled.ul`
             height: 100%;
             padding: 0 20px;
             text-transform: uppercase;
-            font-size: 1rem;
+            font-size: 0.9rem;
             align-self: center;
             display: flex;
             flex-direction: column;
@@ -393,7 +405,7 @@ const NavContainerDesktop = styled.ul`
     }
 `
 const Elemento1 = styled.li`
-    grid-column: 1 / 4;
+    grid-column: 1 / 5;
     border-right: solid 1px black;
     display: grid !important;
     grid-template-columns: 1fr;
@@ -408,7 +420,7 @@ const Elemento1 = styled.li`
 
 `
 const Elemento2 = styled.li`
-    grid-column: 4/6;
+    grid-column: 5/7;
     border-right: solid 1px black;
     &:hover {
         a {
@@ -419,18 +431,18 @@ const Elemento2 = styled.li`
     }
 `
 const Elemento3 = styled.li`
-    grid-column: 6/8;
+    grid-column: 7/9;
     border-right: solid 1px black;
     &:hover {
         a {
-            background-color: var(--purple);
+            background-color: var(--yellow);
             color: white;
             font-family: var(--bold);
         }
     }
 `
 const Elemento4 = styled.li`
-    grid-column: 8/10;
+    grid-column: 9/11;
     border-right: solid 1px black;
     &:hover {
         a {
@@ -441,7 +453,7 @@ const Elemento4 = styled.li`
     }
 `
 const Elemento5 = styled.li`
-    grid-column: 10/12;
+    grid-column: 11/13;
     border-right: solid 1px black;
     &:hover {
         a {
@@ -452,7 +464,18 @@ const Elemento5 = styled.li`
     }
 `
 const Elemento6 = styled.li`
-    grid-column: 12/13;
+    grid-column: 13/15;
+    border-right: solid 1px black;
+    &:hover {
+        a {
+            background-color: var(--purple);
+            color: white;
+            font-family: var(--bold);
+        }
+    }
+`
+const Elemento7 = styled.li`
+    grid-column: 15/17;
     align-self: center;
     ul {
         display: flex;
@@ -466,7 +489,6 @@ const Elemento6 = styled.li`
             font-family: var(--bold);
         }
         a {
-            text-transform: capitalize !important;
             padding-left: 1px !important;
             padding-right: 5px !important;
         }

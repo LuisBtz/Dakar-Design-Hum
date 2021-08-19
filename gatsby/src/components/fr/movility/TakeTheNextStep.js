@@ -7,7 +7,7 @@ const TakeTheNextStep = () => {
 
 const data = useStaticQuery(graphql`
     query  {
-        description: sanityInstituteOfDesign {
+        description: sanityMovility {
             takeBackground {
                 asset {
                     gatsbyImageData(

@@ -333,7 +333,7 @@ const ContenedorProjects = styled.section`
         overflow-y: hidden;
         border-bottom: solid 1px black;
         border-right: solid 1px black;
-        background-color: var(--purple);
+        background-color: var(--yellow);
         color: white;
         padding-top: 50px;
         padding-bottom: 50px;

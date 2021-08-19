@@ -6,7 +6,7 @@ const Marquee = () => {
 
     const data = useStaticQuery(graphql`
     query  {
-      description: sanityTextilesOfSenegal {
+      description: sanityMovility {
         marqueeText {
           en
         }
@@ -24,7 +24,7 @@ const Marquee = () => {
 
 
 const MarqueeContainer = styled.section`
-    background-color: var(--yellow);
+    background-color: var(--purple);
     overflow: scroll;
     padding: 15px 20px;
     border-bottom: solid 1px black;

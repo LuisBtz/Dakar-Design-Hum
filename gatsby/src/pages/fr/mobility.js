@@ -1,17 +1,17 @@
 import * as React from 'react'
 import { graphql } from "gatsby"
 
+import Newsletter from "../../components/fr/home/Newsletter"
 import Layout from "../../components/fr/layout/layout"
 import Seo from "../../components/layout/seo"
-import Marquee from "../../components/fr/manu/Marquee"
-import Description from "../../components/fr/manu/Description"
-import Projects from "../../components/fr/manu/Projects"
-import TakeTheNextStep from "../../components/fr/manu/TakeTheNextStep"
-import Newsletter from "../../components/fr/home/Newsletter"
+import Description from "../../components/fr/movility/Description"
+import Marquee from "../../components/fr/movility/Marquee"
+import Projects from "../../components/fr/movility/Projects"
+import TakeTheNextStep from "../../components/fr/movility/TakeTheNextStep"
 
 export const data = graphql`
   query  {
-    seo: sanityManufacturing {
+    seo: sanityMovility {
       title {
         fr
       }
@@ -28,7 +28,7 @@ export const data = graphql`
 `
 
 // markup
-const ManufacturingPage = ({data}) => {
+const MovilityPage = ({data}) => {
   return (
     <Layout >
     <Seo title={data.seo.title.fr} description={data.seo.marqueeText.fr} image={data.seo.takeBackground.asset.url} />
@@ -41,4 +41,4 @@ const ManufacturingPage = ({data}) => {
   )
 }
 
-export default ManufacturingPage
+export default MovilityPage

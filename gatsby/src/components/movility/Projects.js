@@ -7,9 +7,9 @@ const Projects = () => {
 
 const data = useStaticQuery(graphql`
 query  {
-    description: sanityTextilesOfSenegal {
+    description: sanityMovility {
         
-        project1Image {
+    project1Image {
         asset {
             gatsbyImageData(
             layout: FULL_WIDTH
@@ -17,16 +17,16 @@ query  {
             placeholder: DOMINANT_COLOR
             )
         }
-        frAlt
+        enAlt
         }
         project1Subtitle {
-        fr
+        en
         }
         project1Title {
-        fr
+        en
         }
         project2Image {
-        frAlt
+        enAlt
         asset {
             gatsbyImageData(
             layout: FULL_WIDTH
@@ -36,10 +36,10 @@ query  {
         }
         }
         project2Subtitle {
-        fr
+        en
         }
         project2Title {
-        fr
+        en
         }
         project3Image {
         asset {
@@ -49,16 +49,16 @@ query  {
             placeholder: DOMINANT_COLOR
             )
         }
-        frAlt
+        enAlt
         }
         project3Subtitle {
-        fr
+        en
         }
         project3Title {
-        fr
+        en
         }
         project4Image {
-        frAlt
+        enAlt
         asset {
             gatsbyImageData(
             layout: FULL_WIDTH
@@ -68,13 +68,13 @@ query  {
         }
         }
         project4Subtitle {
-        fr
+        en
         }
         project4Title {
-        fr
+        en
         }
         project5Image {
-        frAlt
+        enAlt
         asset {
             gatsbyImageData(
             layout: FULL_WIDTH
@@ -84,13 +84,13 @@ query  {
         }
         }
         project5Subtitle {
-        fr
+        en
         }
         project5Title {
-        fr
+        en
         }
         project6Image {
-        frAlt
+        enAlt
         asset {
             gatsbyImageData(
             layout: FULL_WIDTH
@@ -100,10 +100,10 @@ query  {
         }
         }
         project6Subtitle {
-        fr
+        en
         }
         project6Title {
-        fr
+        en
         }
         project7Image {
         asset {
@@ -113,16 +113,16 @@ query  {
             placeholder: DOMINANT_COLOR
             )
         }
-        frAlt
+        enAlt
         }
         project7Subtitle {
-        fr
+        en
         }
         project7Title {
-        fr
+        en
         }
         project8Image {
-        frAlt
+        enAlt
         asset {
             gatsbyImageData(
             layout: FULL_WIDTH
@@ -132,75 +132,72 @@ query  {
         }
         }
         project8Subtitle {
-        fr
+        en
         }
         project8Title {
-        fr
+        en
         }
         quote {
-        fr
+        en
         }
         quoteFrom {
-        fr
+        en
         }
-
 
     }
 }
 `)
 
-
-
 // Project 1
 const getDataImage1 = getImage(data.description.project1Image.asset);
-const altImage1 = data.description.project1Image.frAlt;
-const title1 = data.description.project1Title.fr;
-const subtitle1 = data.description.project1Subtitle.fr;
+const altImage1 = data.description.project1Image.enAlt;
+const title1 = data.description.project1Title.en;
+const subtitle1 = data.description.project1Subtitle.en;
 
 // Project 2
 const getDataImage2 = getImage(data.description.project2Image.asset);
-const altImage2 = data.description.project2Image.frAlt;
-const title2 = data.description.project2Title.fr;
-const subtitle2 = data.description.project2Subtitle.fr;
+const altImage2 = data.description.project2Image.enAlt;
+const title2 = data.description.project2Title.en;
+const subtitle2 = data.description.project2Subtitle.en;
 
 // Project 3
 const getDataImage3 = getImage(data.description.project3Image.asset);
-const altImage3 = data.description.project3Image.frAlt;
-const title3 = data.description.project3Title.fr;
-const subtitle3 = data.description.project3Subtitle.fr;
+const altImage3 = data.description.project3Image.enAlt;
+const title3 = data.description.project3Title.en;
+const subtitle3 = data.description.project3Subtitle.en;
 
 // Project 4
 const getDataImage4 = getImage(data.description.project4Image.asset);
-const altImage4 = data.description.project4Image.frAlt;
-const title4 = data.description.project4Title.fr;
-const subtitle4 = data.description.project4Subtitle.fr;
+const altImage4 = data.description.project4Image.enAlt;
+const title4 = data.description.project4Title.en;
+const subtitle4 = data.description.project4Subtitle.en;
 
 // Project 5
 const getDataImage5 = getImage(data.description.project5Image.asset);
-const altImage5 = data.description.project5Image.frAlt;
-const title5 = data.description.project5Title.fr;
-const subtitle5 = data.description.project5Subtitle.fr;
+const altImage5 = data.description.project5Image.enAlt;
+const title5 = data.description.project5Title.en;
+const subtitle5 = data.description.project5Subtitle.en;
 
 // Project 6
 const getDataImage6 = getImage(data.description.project6Image.asset);
-const altImage6 = data.description.project6Image.frAlt;
-const title6 = data.description.project6Title.fr;
-const subtitle6 = data.description.project6Subtitle.fr;
+const altImage6 = data.description.project6Image.enAlt;
+const title6 = data.description.project6Title.en;
+const subtitle6 = data.description.project6Subtitle.en;
 
 // Project 7
 const getDataImage7 = getImage(data.description.project7Image.asset);
-const altImage7 = data.description.project7Image.frAlt;
-const title7 = data.description.project7Title.fr;
-const subtitle7 = data.description.project7Subtitle.fr;
+const altImage7 = data.description.project7Image.enAlt;
+const title7 = data.description.project7Title.en;
+const subtitle7 = data.description.project7Subtitle.en;
 
 // Project 8
 const getDataImage8 = getImage(data.description.project8Image.asset);
-const altImage8 = data.description.project8Image.frAlt;
-const title8 = data.description.project8Title.fr;
-const subtitle8 = data.description.project8Subtitle.fr;
+const altImage8 = data.description.project8Image.enAlt;
+const title8 = data.description.project8Title.en;
+const subtitle8 = data.description.project8Subtitle.en;
 
-const quote = data.description.quote.fr;
-const quoteFrom = data.description.quoteFrom.fr;
+const quote = data.description.quote.en;
+const quoteFrom = data.description.quoteFrom.en;
 
 
 
@@ -336,7 +333,7 @@ const ContenedorProjects = styled.section`
         overflow-y: hidden;
         border-bottom: solid 1px black;
         border-right: solid 1px black;
-        background-color: var(--yellow);
+        background-color: var(--purple);
         color: white;
         padding-top: 50px;
         padding-bottom: 50px;

@@ -19,6 +19,7 @@ import settingsPage from './pages/settingsPage'
 import homePage from './pages/homePage'
 import instituteOfDesign from './pages/instituteOfDesign'
 import textilesOfSenegal from './pages/textilesOfSenegal'
+import movility from './pages/movility'
 import studioPage from './pages/studioPage'
 import manufacturing from './pages/manufacturing'
 
@@ -45,6 +46,7 @@ export default createSchema({
     homePage,
     instituteOfDesign,
     textilesOfSenegal,
+    movility,
     studioPage,
     manufacturing
   ]),

@@ -24,7 +24,7 @@ const Marquee = () => {
 
 
 const MarqueeContainer = styled.section`
-    background-color: var(--purple);
+    background-color: var(--yellow);
     overflow: scroll;
     padding: 15px 20px;
     border-bottom: solid 1px black;

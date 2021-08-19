@@ -7,7 +7,7 @@ const TakeTheNextStep = () => {
 
 const data = useStaticQuery(graphql`
     query  {
-        description: sanityInstituteOfDesign {
+        description: sanityMovility {
             takeBackground {
                 asset {
                     gatsbyImageData(
@@ -16,7 +16,7 @@ const data = useStaticQuery(graphql`
                     placeholder: DOMINANT_COLOR
                     )
                 }
-                frAlt
+                enAlt
             }
         }
     }
@@ -26,12 +26,11 @@ const getDataImage = getImage(data.description.takeBackground.asset);
 
 
 
-
 const [request, showRequest] = useState(false);
 
     const toggleRequest = () => {
         showRequest(!request);
-      };
+};
 
 
 
@@ -39,7 +38,10 @@ const [admissions, showAdmission] = useState(false);
 
     const toggleAdmission = () => {
         showAdmission(!admissions);
-      };
+};
+
+
+
 
 
     return(
@@ -47,19 +49,19 @@ const [admissions, showAdmission] = useState(false);
             <GatsbyImage
                 style={{ height: "100%", width: "100%" }}
                 image={getDataImage}
-                alt={data.description.takeBackground.frAlt}
+                alt={data.description.takeBackground.enAlt}
             />
             <TextoRelative>
-                <h2>Passez à l'étape suivante</h2>
+                <h2>Take the next step</h2>
                 <Buttons>
                     <div className='links'>
-                            <Link className='first' to='/fr/institute-of-design'>VISITE</Link><Link className='second' to='/fr/institute-of-design'><img alt='arrow icon' src='/ddh_flecha.svg' /></Link>
+                            <Link className='first' to='institute-of-design'>VISIT</Link><Link className='second' to='institute-of-design'><img alt='arrow icon' src='/ddh_flecha.svg' /></Link>
                     </div>
                     <div className='links' aria-hidden="true" onMouseDown={toggleRequest}>
-                            <span className='first' >DEMANDE D'INFO</span><span className='second' ><img alt='arrow icon' src='/ddh_flecha.svg' /></span>
+                            <span className='first' >REQUEST INFO</span><span className='second' ><img alt='arrow icon' src='/ddh_flecha.svg' /></span>
                     </div>
                     <div className='links' aria-hidden="true" onMouseDown={toggleAdmission}>
-                            <span className='first' >APPLIQUER MAINTENANT</span><span className='second' ><img alt='arrow icon' src='/ddh_flecha.svg' /></span>
+                            <span className='first' >APPLY NOW</span><span className='second' ><img alt='arrow icon' src='/ddh_flecha.svg' /></span>
                     </div>
                 </Buttons>
             </TextoRelative>
@@ -67,24 +69,23 @@ const [admissions, showAdmission] = useState(false);
 
 
 
-
             <FormContainerRequest className={request ? null : 'hide' } >
                 <div className='contenedor' >
                     <button onMouseDown={toggleRequest} className='close'><span>X</span></button>
-                    <h2>Demande d'info</h2>
-                    <form name="Demande d'info Fr" data-netlify="true">
-                        <input name='name' type='text' placeholder='Nom' />
+                    <h2>Request info</h2>
+                    <form name="Request Info" data-netlify="true">
+                        <input name='name' type='text' placeholder='Name' />
                         <div className='columns'>
                             <div>
                                 <input name='email' type='email' placeholder='Email' />
                             </div>
                             <div>
-                                <input name='region' type='text' placeholder='Région' />
+                                <input name='region' type='text' placeholder='Region' />
                             </div>
                         </div>
-                        <label htmlFor='textarea' >Un message</label>
+                        <label htmlFor='textarea' >Message</label>
                         <textarea id='textarea' name='message' />
-                        <button type="submit"><span>Envoyer</span><span><img alt='arrow icon' src='/ddh_flecha.svg' /></span></button>
+                        <button type="submit"><span>Send</span><span><img alt='arrow icon' src='/ddh_flecha.svg' /></span></button>
                     </form>
                 </div>
             </FormContainerRequest>
@@ -94,26 +95,28 @@ const [admissions, showAdmission] = useState(false);
                 <div className='contenedor' >
                     <button onMouseDown={toggleAdmission} className='close'><span>X</span></button>
                     <h2>Admissions</h2>
-                    <form name="Admissions Fr" data-netlify="true">
-                        <input name='name' type='text' placeholder='Nom' />
+                    <form name="Admissions" data-netlify="true">
+                        <input name='name' type='text' placeholder='Name' />
                         <div className='columns'>
                             <div>
                                 <input name='email' type='email' placeholder='Email' />
                             </div>
                             <div>
-                                <input name='region' type='text' placeholder='Région' />
+                                <input name='region' type='text' placeholder='Region' />
                             </div>
                         </div>
-                        <input name='program' type='text' placeholder='Programme' />
-                        <button type="submit"><span>Envoyer</span><span><img alt='arrow icon' src='/ddh_flecha.svg' /></span></button>
+                        <input name='program' type='text' placeholder='Program' />
+                        <button type="submit"><span>Send</span><span><img alt='arrow icon' src='/ddh_flecha.svg' /></span></button>
                     </form>
                 </div>
             </FormContainerAdmissions>
 
 
+
         </TakeContainer>
     )
 }
+
 
 const TakeContainer = styled.section`
     position: relative;
@@ -193,7 +196,7 @@ const Buttons = styled.div`
             width: 80%;
             display: block;
             align-self: center;
-            line-height: 1.1;
+            line-height: 1.2;
         }
         .second {
             font-family: var(--bold);

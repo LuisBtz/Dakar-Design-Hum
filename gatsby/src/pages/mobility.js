@@ -1,10 +1,10 @@
 import * as React from 'react'
 import { graphql } from "gatsby"
 
-import Marquee from "../components/studio/Marquee"
-import Description from "../components/studio/Description"
-import Projects from "../components/studio/Projects"
-import TakeTheNextStep from "../components/studio/TakeTheNextStep"
+import Marquee from "../components/movility/Marquee"
+import Description from "../components/movility/Description"
+import Projects from "../components/movility/Projects"
+import TakeTheNextStep from "../components/movility/TakeTheNextStep"
 import Newsletter from "../components/home/Newsletter"
 import Layout from "../components/layout/layout"
 import Seo from "../components/layout/seo"
@@ -12,7 +12,7 @@ import Seo from "../components/layout/seo"
 
 export const data = graphql`
   query  {
-    seo: sanityStudioPage {
+    seo: sanityMovility {
       title {
         en
       }
@@ -29,7 +29,7 @@ export const data = graphql`
 `
 
 // markup
-const StudioPage = ({data}) => {
+const MobilityPage = ({data}) => {
   return (
     <Layout >
     <Seo title={data.seo.title.en} description={data.seo.marqueeText.en} image={data.seo.takeBackground.asset.url} />
@@ -42,4 +42,4 @@ const StudioPage = ({data}) => {
   )
 }
 
-export default StudioPage
+export default MobilityPage

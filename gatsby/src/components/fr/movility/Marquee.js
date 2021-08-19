@@ -6,9 +6,9 @@ const Marquee = () => {
 
     const data = useStaticQuery(graphql`
     query  {
-      description: sanityTextilesOfSenegal {
+      description: sanityMovility {
         marqueeText {
-          en
+          fr
         }
       }
     }
@@ -17,14 +17,14 @@ const Marquee = () => {
     
     return (
         <MarqueeContainer>
-            <p><span>•</span><span>{data.description.marqueeText.en}</span><span>•</span><span>{data.description.marqueeText.en}</span><span>•</span><span>{data.description.marqueeText.en}</span><span>•</span><span>{data.description.marqueeText.en}</span><span>•</span><span>{data.description.marqueeText.en}</span><span>•</span><span>{data.description.marqueeText.en}</span><span>•</span><span>{data.description.marqueeText.en}</span><span>•</span><span>{data.description.marqueeText.en}</span><span>•</span><span>{data.description.marqueeText.en}</span><span>•</span><span>{data.description.marqueeText.en}</span></p>
+            <p><span>•</span><span>{data.description.marqueeText.fr}</span><span>•</span><span>{data.description.marqueeText.fr}</span><span>•</span><span>{data.description.marqueeText.fr}</span><span>•</span><span>{data.description.marqueeText.fr}</span><span>•</span><span>{data.description.marqueeText.fr}</span><span>•</span><span>{data.description.marqueeText.fr}</span><span>•</span><span>{data.description.marqueeText.fr}</span><span>•</span><span>{data.description.marqueeText.fr}</span><span>•</span><span>{data.description.marqueeText.fr}</span><span>•</span><span>{data.description.marqueeText.fr}</span></p>
         </MarqueeContainer>
     )
 }
 
 
 const MarqueeContainer = styled.section`
-    background-color: var(--yellow);
+    background-color: var(--purple);
     overflow: scroll;
     padding: 15px 20px;
     border-bottom: solid 1px black;

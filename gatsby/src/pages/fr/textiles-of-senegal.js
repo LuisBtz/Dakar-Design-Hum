@@ -6,7 +6,7 @@ import Layout from "../../components/fr/layout/layout"
 import Seo from "../../components/layout/seo"
 import Description from "../../components/fr/tos/Description"
 import Marquee from "../../components/fr/tos/Marquee"
-import Projects from "../../components/tos/Projects"
+import Projects from "../../components/fr/tos/Projects"
 import TakeTheNextStep from "../../components/fr/tos/TakeTheNextStep"
 
 export const data = graphql`
@@ -28,7 +28,7 @@ export const data = graphql`
 `
 
 // markup
-const IndexPage = ({data}) => {
+const TextilesPage = ({data}) => {
   return (
     <Layout >
     <Seo title={data.seo.title.fr} description={data.seo.marqueeText.fr} image={data.seo.takeBackground.asset.url} />
@@ -41,4 +41,4 @@ const IndexPage = ({data}) => {
   )
 }
 
-export default IndexPage
+export default TextilesPage

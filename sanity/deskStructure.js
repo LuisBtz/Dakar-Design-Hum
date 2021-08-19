@@ -53,5 +53,13 @@ export default () =>
               .schemaType('manufacturing')
               .documentId('manufacturing')
         ),
-        ...S.documentTypeListItems().filter(listItem => !['settingsPage', 'homePage', 'instituteOfDesign', 'textilesOfSenegal', 'studioPage', 'manufacturing'].includes(listItem.getId()))
+        S.listItem()
+          .title('Mobility')
+          .icon(() => '🚙')
+          .child(
+            S.document()
+              .schemaType('movility')
+              .documentId('movility')
+        ),
+        ...S.documentTypeListItems().filter(listItem => !['settingsPage', 'homePage', 'instituteOfDesign', 'textilesOfSenegal', 'studioPage', 'manufacturing', 'movility'].includes(listItem.getId()))
     ])

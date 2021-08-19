@@ -53,28 +53,23 @@ export default {
         },
         {
             name: 'textilesOfSeneglaText',
-            title: 'Textiles Of Senegla Text',
+            title: 'Textiles Of Senegal Text',
             type: 'singleText'
         },
         {
             name: 'textilesOfSeneglaImage',
-            title: 'Textiles Of Senegla Image',
+            title: 'Textiles Of Senegal Image',
             type: 'imageType'
         },
         {
-            name: 'word1',
-            title: 'Word 1',
+            name: 'movilityText',
+            title: 'Mobility Text',
             type: 'singleText'
         },
         {
-            name: 'word2',
-            title: 'Word 2',
-            type: 'singleText'
-        },
-        {
-            name: 'word3',
-            title: 'Word 3',
-            type: 'singleText'
+            name: 'movilityImage',
+            title: 'Mobility Image',
+            type: 'imageType'
         },
         {
             name: 'quote',

@@ -7,9 +7,9 @@ const Projects = () => {
 
 const data = useStaticQuery(graphql`
 query  {
-    description: sanityTextilesOfSenegal {
+    description: sanityMovility {
         
-        project1Image {
+    project1Image {
         asset {
             gatsbyImageData(
             layout: FULL_WIDTH
@@ -144,11 +144,9 @@ query  {
         fr
         }
 
-
     }
 }
 `)
-
 
 
 // Project 1
@@ -336,7 +334,7 @@ const ContenedorProjects = styled.section`
         overflow-y: hidden;
         border-bottom: solid 1px black;
         border-right: solid 1px black;
-        background-color: var(--yellow);
+        background-color: var(--purple);
         color: white;
         padding-top: 50px;
         padding-bottom: 50px;

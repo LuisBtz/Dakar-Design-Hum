@@ -29,7 +29,7 @@ export const data = graphql`
 `
 
 // markup
-const IndexPage = ({data}) => {
+const StudioPage = ({data}) => {
   return (
     <Layout >
     <Seo title={data.seo.title.fr} description={data.seo.marqueeText.fr} image={data.seo.takeBackground.asset.url} />
@@ -42,4 +42,4 @@ const IndexPage = ({data}) => {
   )
 }
 
-export default IndexPage
+export default StudioPage
