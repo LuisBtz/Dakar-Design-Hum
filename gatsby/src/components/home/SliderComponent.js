@@ -31,6 +31,7 @@ const SliderComponent = () => {
                             layout: FULL_WIDTH
                             outputPixelDensities: 1.5
                             placeholder: DOMINANT_COLOR
+                            aspectRatio: 1.78
                         )
                         id
                     }

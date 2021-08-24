@@ -167,7 +167,7 @@ const Header = () => {
                             <li><Link to='/textiles-of-senegal' onClick={toggleVisible}>TEXTILES</Link></li>
                             <li><Link to='/studio' onClick={toggleVisible}>STUDIO</Link></li>
                             <li><Link to='/manufacturing' onClick={toggleVisible}>MANUFACTURING</Link></li>
-                            <li><Link to='/mobility' onClick={toggleVisible}>MOVILITY</Link></li>
+                            <li><Link to='/mobility' onClick={toggleVisible}>MOBILITY</Link></li>
                         </ul>
                     </nav>
                     <button aria-label="Close navbar" className='overlay' onClick={toggleVisible}></button>
