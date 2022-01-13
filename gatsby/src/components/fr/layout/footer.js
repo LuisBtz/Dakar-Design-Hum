@@ -50,10 +50,11 @@ const altText = data.sanitySettingsPage.logo.frAlt;
                 <div className='first'>
                     <p><strong>PROGRAMMES</strong></p>
                     <ul>
-                        <li><Link  to='/institute-of-design'>ACADÉMIE</Link></li>
-                        <li><Link to='/textiles-of-senegal'>TEXTILES</Link></li>
-                        <li><Link to='/studio'>STUDIO</Link></li>
-                        <li><Link to='/manufacturing'>FABRICATION</Link></li>
+                        <li><Link  to='/fr/institute-of-design'>ACADÉMIE</Link></li>
+                        <li><Link to='/fr/textiles-of-senegal'>TEXTILES</Link></li>
+                        <li><Link to='/fr/studio'>STUDIO</Link></li>
+                        <li><Link to='/fr/manufacturing'>FABRICATION</Link></li>
+                        <li><Link to='/fr/mobility'>MOBILITÉ</Link></li>
                     </ul>
                 </div>
                 <div className='second'>

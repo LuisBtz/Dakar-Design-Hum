@@ -50,10 +50,11 @@ const altText = data.sanitySettingsPage.logo.enAlt;
                 <div className='first'>
                     <p><strong>PROGRAMS</strong></p>
                     <ul>
-                        <li><Link  to='/institute-of-design'>ACADEMY</Link></li>
+                        <li><Link  to='/institute-of-design'>INSTITUTE</Link></li>
                         <li><Link to='/textiles-of-senegal'>TEXTILES</Link></li>
                         <li><Link to='/studio'>STUDIO</Link></li>
                         <li><Link to='/manufacturing'>MANUFACTURING</Link></li>
+                        <li><Link to='/mobility'>MOBILITY</Link></li>
                     </ul>
                 </div>
                 <div className='second'>
